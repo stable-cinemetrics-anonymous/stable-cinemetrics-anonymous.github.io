@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anonymous Video Benchmark</title>
+  <title>Stable Cinemetrics</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .hide-scrollbar::-webkit-scrollbar{display:none}
@@ -22,58 +22,60 @@
 
   <!-- Main Content -->
   <main class="md:ml-52 p-4 md:p-6 space-y-20">
-    <!-- SCINE Scripts Section -->
+    <!-- ──────────────── SCINE Scripts ──────────────── -->
     <section id="scine-scripts" class="space-y-6">
       <h1 class="text-3xl md:text-4xl font-semibold text-center">SCINE Scripts</h1>
       <p id="desc-scripts" class="max-w-3xl mx-auto text-center text-neutral-600"></p>
 
       <div class="w-full max-w-6xl mx-auto flex justify-between items-center">
-        <button id="prevBtn" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">⟵ Prev</button>
-        <button id="nextBtn" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">Next ⟶</button>
+        <button id="prevBtn"   class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">⟵ Prev</button>
+        <button id="nextBtn"   class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">Next ⟶</button>
       </div>
 
-      <div id="carousel-wrapper" class="w-full max-w-6xl mx-auto min-h-[14rem] flex items-center justify-center">
-        <!-- populated dynamically -->
-      </div>
+      <div id="carousel-wrapper" class="w-full max-w-6xl mx-auto min-h-[14rem] flex items-center justify-center"></div>
       <div id="promptBox" class="max-w-5xl mx-auto text-base md:text-lg leading-relaxed text-center"></div>
     </section>
 
-    <!-- SCINE Visuals Section -->
+    <!-- ──────────────── SCINE Visuals ──────────────── -->
     <section id="scine-visuals" class="space-y-6">
       <h2 class="text-3xl font-semibold text-center">SCINE Visuals</h2>
       <p id="desc-visuals" class="max-w-3xl mx-auto text-center text-neutral-600"></p>
-      <!-- future content -->
+
+      <div class="w-full max-w-6xl mx-auto flex justify-between items-center">
+        <button id="prevVisBtn" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">⟵ Prev</button>
+        <button id="nextVisBtn" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">Next ⟶</button>
+      </div>
+
+      <div id="visuals-carousel-wrapper" class="w-full max-w-6xl mx-auto min-h-[14rem] flex items-center justify-center"></div>
+      <div id="visuals-promptBox" class="max-w-5xl mx-auto text-base md:text-lg leading-relaxed text-center"></div>
     </section>
   </main>
 
   <script>
-    /* ----------------- Section Descriptions ---------------- */
+    /* --------------------- Section Descriptions --------------------- */
     const sectionDescriptions = {
-      scripts: 'Qualitative results on SCINE Scripts, across models, on different text prompts.',
-      visuals: 'Qualitative results on SCINE Visuals, across models, on different text prompts.'
+      scripts : 'Qualitative results on SCINE Scripts across models.',
+      visuals : 'Qualitative results on SCINE Visuals across models.'
     };
-    document.getElementById('desc-scripts').textContent = sectionDescriptions.scripts;
+    document.getElementById('desc-scripts').textContent  = sectionDescriptions.scripts;
     document.getElementById('desc-visuals').textContent = sectionDescriptions.visuals;
 
     /* ----------------------- Model Data ---------------------- */
-    // Full list of raw model identifiers (can be >9)
     const modelNames = [
       'PyramidFlow','vchitect_2.0','cogvideo_5b','easyanimate_5.1','hunyuan','ltx_video','mochi','wan_1b','wan_14b','luma_ray_2','minimax','pika_2.2'
     ];
-
-    // Friendly display names
     const modelDisplay = {
       PyramidFlow:'Pyramid Flow','vchitect_2.0':'VChitect 2.0',cogvideo_5b:'CogVideo 5B','easyanimate_5.1':'EasyAnimate 5.1',hunyuan:'Hunyuan',
-      ltx_video:'LTX Video',mochi:'Mochi',wan_1b:'Wan 1B',wan_14b:'Wan 14B',luma_ray_2:'Luma Ray 2',minimax:'Minimax','pika_2.2':'Pika 2.2'
+      ltx_video:'LTX Video',mochi:'Mochi',wan_1b:'Wan 1B',wan_14b:'Wan 14B',luma_ray_2:'Luma Ray 2',minimax:'Minimax','pika_2.2':'Pika 2.2'
     };
 
-    /* --------------- Prompts & Metadata per ID --------------- */
-    const pages=[
+    /* -------------------- Scripts Prompts -------------------- */
+    const scriptPages=[
       {id:'00011',prompt:'Inside a busy street corner, during the day, a street vendor gestures energetically while serving a hot dog to a customer. Meanwhile, hurried pedestrians navigate the crowded sidewalk, and a cyclist carefully maneuvers through slow-moving traffic in the background.',meta:'Concurrent Actions'},
       {id:'00051',prompt:'At a wedding reception, the bride starts tossing her bouquet over her shoulder as, simultaneously, a group of bridesmaids begins jostling for position to catch it.',meta:'Overlapping Actions'},
       {id:'00065',prompt:'In a park, a street performer juggles three brightly colored balls, maintaining a smooth, repeating cascade pattern.',meta:'Cyclic Actions'},
-      {id:'00114',prompt:'Medium shot of a lone astronaut planting a flag on the surface of Mars. The Earth hangs small in the black sky. Text appears etched onto the flagpole base: "For All Mankind". The text remains visible as the shot holds.',meta:'Text Generation'},
-      {id:'00145',prompt:'Two friends drive down a sunny desert highway in a convertible, wind in their hair. The passenger suddenly points off-road with wide eyes, "Whoa! Is that... a giant ball of yarn? We have to-- stop!"',meta:'Dialogues'},
+      {id:'00114',prompt:'Medium shot of a lone astronaut planting a flag on the surface of Mars. The Earth hangs small in the black sky. Text appears etched onto the flagpole base: “For All Mankind”. The text remains visible as the shot holds.',meta:'Text Generation'},
+      {id:'00145',prompt:'Two friends drive down a sunny desert highway in a convertible, wind in their hair. The passenger suddenly points off-road with wide eyes, “Whoa! Is that... a giant ball of yarn? We have to-- stop!”',meta:'Dialogues'},
       {id:'00206',prompt:'In a small and otherwise barren park, amid cold daylight, a lone figure of an old man sits crouched on a swing. He looks up and frowns at the tears escaping his closed eyelids.',meta:'Emotion – Sadness'},
       {id:'00740',prompt:'Daytime in a quiet suburban kitchen; a woman turns around and freezes, her eyes fixed on an open backdoor gently swinging.',meta:'Emotion – Surprise'},
       {id:'01103',prompt:'At a desolate train platform, a small group of conspirators clusters around a cryptic map, their anxious eyes scanning their surroundings in a silent agreement of urgency',meta:'Genre – Thriller'},
@@ -81,75 +83,96 @@
       {id:'00350',prompt:'Inside a cramped elevator, a woman carrying an enormous bouquet of balloons accidentally pops one, causing a chain reaction of popping balloons and startled yelps, with the petals covering every surface of the small space.',meta:'Genre – Comedy'}
     ];
 
-    /* ------------------- Utilities ------------------- */
-    function shuffle(arr){
-      const a=[...arr];
-      for(let i=a.length-1;i>0;i--){
-        const j=Math.floor(Math.random()*(i+1));
-        [a[i],a[j]]=[a[j],a[i]];
-      }
-      return a;
-    }
+    /* -------------------- Visuals Prompts -------------------- */
+    const visualPages=[
+      {id:'00078',prompt:'Bright spray paint lifts off a concrete wall, streaming back into the nozzle of a spray can held by a figure whose arm moves in a swift, reversed motion, captured with a wide lens and hard shadows cast by direct light, the scene bathed in cool tones as a tracking shot follows the paint\'s trajectory, flickering light emphasizing the can\'s metallic gleam.',meta:'Cinematographer – Easy'},
+      {id:'00362',prompt:'A woman with long braided hair sprints with primal urgency along a rocky beach at dusk, the shore\'s churning waves to her right rendered in cool desaturated blues and grays under an overcast sky. Her eyes remain locked on an inflatable raft being violently tugged seaward as she maintains perfect parallel motion with the crashing surf, bare feet pounding wet sand in a wide tracking shot stabilized for fluid movement. A man and two bounding dogs mirror her path slightly upshore, their elongated shadows stretching toward the treeline in hard chiaroscuro from low-key sidelighting. The pursuing wave she races beside temporarily swallows driftwood and seabirds before retreating, its foamy fingers clawing at gnarled pine roots marking the high tide line.',meta:'Director – Easy'},
+      {id:'00535',prompt:'An old-fashioned rotary phone with a weathered Bakelite body sits atop a bedside table of pale, distressed wood, its high-contrast silhouette sharp against the muted sepia tones of an otherwise empty room. The relentless ringing reverberates through negative space where dusk light slants through half-drawn curtains, casting long diagonal shadows that stretch toward a vacant bedframe.',meta:'Production Designer – Easy'},
+      {id:'00775',prompt:'In a tense saloon lit by flickering tungsten bulbs casting hard shadows through direct side lighting, a medium close-up two-shot frames a cowboy slamming his fist onto the weathered oak table, shallow depth of field at wide aperture isolating his snarling face against blurred background bottles. A dolly pushes in slowly as Dutch angle tension builds, warm backlight sculpting pistol smoke drifting through shafts of artificial gloom, the rival\'s fearful eyes reflected in a whiskey glass foreground element under crisp medium ISO exposure.',meta:'Cinematographer – Hard'},
+      {id:'00799',prompt:'Inside a caf\u00e9 at midday, warm-toned amber and walnut hues wrap patrons frozen mid-action\u2014hands hovering over steaming mugs\u2014as sudden rain streaks floor-to-ceiling windows. A medium-full shot slowly pans right across linen-draped worn oak tables arranged in rule-of-thirds harmony, backlight from the storm casting silhouettes against the cascading water while overcast daylight etches deepening shadows across startled faces.',meta:'Director – Easy'},
+      {id:'00895',prompt:'A candle flame flickers gently atop a romantic dinner table for two on a cliffside at dusk, overlooking the ocean. The weathered teakwood table supports polished silver tableware and ivory linen with subtle grid-pattern embroidery, accompanied by beeswax candles in hammered brass holders. A deep navy table runner mirrors the darkening horizon where indigo waves break against distant rocks. Warm amber candlelight contrasts with cool twilight tones, as the table\u2019s horizontal lines perfectly align with the ocean\u2019s horizon under a rule-of-thirds sky. Crystal wine glasses catch the dancing light while salt-tinged air ruffles crisp, triangular folded napkins, their motion softened by coastal winds. A single gardenia blossom rests between the settings, its waxy petals glowing golden against the matte linen as dusk transforms the sky from burnt sienna to violet.',meta:'Production Designer – Hard'},
+      {id:'01128',prompt:'On an overgrown forest path, two adventurers share a lighthearted moment as one dramatically lifts a moss-covered artifact while the other laughs in pure delight, captured with a wide lens at wide aperture to isolate their interaction amidst the dense foliage. The camera arcs around them in a medium-full two shot, maintaining a shallow depth of field that renders the sun-dappled forest background as soft bokeh. Golden Hour light filters through the canopy at NEUTRAL, casting warm side light that sculpts their faces and a subtle backlight to separate them from the environment. Diffused shadows created by overhead foliage pattern the ground, while a slight Dutch tilt amplifies the scene\'s playful energy as the artifact catches a glint of directional sunlight.',meta:'Cinematographer – Hard'},
+      {id:'00012',prompt:'On a sprawling lawn in the day, a family unpacks a picnic basket onto a blanket, captured in a wide master shot with a deep depth of field using a wide lens with a narrow aperture. A dolly-mounted camera glides horizontally at knee height, panning smoothly between the picnic setup and two children tossing a frisbee back and forth, their motion frozen crisply with a fast shutter speed. The low ISO exposure maintains clarity across the sunlit scene, while the composition strategically frames the jogger\'s steady path along the grass border within the same continuous shot.',meta:'Cinematographer – Hard'},
+      {id:'00044',prompt:'In a dimly lit, damp basement with peeling paint and moss-streaked concrete walls under high contrast shadows, a single water droplet falls with metronomic precision from a corroded copper pipe. Captured in shallow depth of field, it lands squarely on a 1940s-era electrical fuse box with rusted iron panels at frame right, beneath a lone tungsten bulb casting hard, jagged shadows. As sparks erupt in a crackling horizontal arc from the ruptured casing, malfunctioning circuitry floods the foreground with erratic cyan bursts while the bulb\u2019s death throes reveal layers of peeling insulation and crumbling brick. A slow camera tilt ascends from the sparking fuse box up the dripping pipe, and as the final light fades, the frame plunges into inky darkness punctuated only by fading orange embers',meta:'Director – Hard'},
+      {id:'00236',prompt:'In a dimly lit Victorian-inspired study with mahogany paneling and heavy velvet drapes, a man in a tailored charcoal suit stands silhouetted against a grand arched window framing a rain-streaked metropolis glittering with midnight blue city lights. He swirls amber whiskey in a lead-crystal tumbler, the liquid catching golden highlights from a brass desk lamp illuminating a cracked silver frame holding a vibrant family photograph - its sunlit yellows and grass greens glaringly discordant with the study\'s burgundy-and-gold color scheme. The clawfoot desk beneath bears witness to neglect, its polished surface marred by water rings and clustered with relics of better days: a pocket watch chain spilling from a leather-bound ledger, cigar ashes dusting a jade paperweight, the photograph\'s fractured glass reflecting distorted fragments of a smiling woman and child.',meta:'Production Designer – Hard'},
+      {id:'00442',prompt:'In a zero-gravity training facility with high-tech metallic surfaces, astronaut candidates wearing form-fitting compression suits navigate floating aluminum obstacle modules. A fisheye lens exaggerates the curved geometry of magnetic training panels suspended in grid formation, while a stabilizer-mounted camera tracks laterally with a candidate mid-maneuver \u2013 capturing their flailing limbs reflected in glossy safety padding. Cool LEDs cast sharp geometric shadows across faces beaded with sweat, their determined grimaces backlit by floating warning beacons that paint crimson streaks across the chrome environment.',meta:'Director – Hard'},
+      {id:'00461',prompt:'In a bustling university hallway during a lively graduation ceremony, captured with a Medium lens and shallow depth of field to isolate the pair from the chaotic background, a proud father and his accomplished daughter share a spontaneous, heartfelt hug in close-up framing. The camera executes a gentle push-in movement on a stabilizer, compressing the emotional space between them as celebratory crowds blur into abstract shapes of color and motion.',meta:'Camera – Easy'}
+    ];
 
-    // Cache to store chosen models per ID so we only pick once
-    const selectedModelsCache = {};
+    /* ------------------- Utility Helpers ------------------- */
+    const selectedCacheScripts  = {};
+    const selectedCacheVisuals = {};
 
-    async function chooseModelsWithFiles(id, desired=9){
-      const folder=`data/scine_scripts/${id}/`;
+    function shuffle(a){const arr=[...a];for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
+
+    async function pickModels(id,folder,desired){
       const shuffled=shuffle(modelNames);
       const chosen=[];
       for(const m of shuffled){
         try{
-          const resp=await fetch(`${folder}${m}_${id}.mp4`,{method:'HEAD'});
-          if(resp.ok){chosen.push(m);} // file exists
+          const ok=await fetch(`${folder}${m}_${id}.mp4`,{method:'HEAD'}).then(r=>r.ok).catch(()=>false);
+          if(ok) chosen.push(m);
           if(chosen.length===desired) break;
-        }catch(e){/* ignore fetch errors */}
+        }catch{ /* ignore */ }
       }
       return chosen;
     }
 
-    async function getModelsForId(id){
-      if(selectedModelsCache[id]) return selectedModelsCache[id];
-      const models = await chooseModelsWithFiles(id,9);
-      selectedModelsCache[id] = models; // cache for future visits
+    async function getModels(id,folder,desired,cache){
+      if(cache[id]) return cache[id];
+      const models=await pickModels(id,folder,desired);
+      cache[id]=models;
       return models;
     }
 
-    function buildGridHTML(models,id){
-      const folder=`data/scine_scripts/${id}/`;
-      return `<div class="grid grid-cols-3 gap-0 hide-scrollbar">`+
+    function buildGrid(models,folder,id,cols){
+      return `<div class="grid grid-cols-${cols} gap-0 hide-scrollbar">`+
         models.map(m=>{
           const src=`${folder}${m}_${id}.mp4`;
           const label=modelDisplay[m]||m;
-          return `<div class=\"relative group w-full h-40 md:h-48 overflow-hidden border border-gray-200\"><video src=\"${src}\" muted loop playsinline class=\"object-cover w-full h-full\"></video><span class=\"absolute inset-x-0 bottom-0 bg-black/70 text-center text-xs opacity-0 group-hover:opacity-100 transition-opacity p-1 text-white\">${label}</span></div>`;
-        }).join('')+
-        `</div>`;
+          return `<div class=\"relative group w-full h-40 md:h-48 overflow-hidden border border-gray-200\"><video src=\"${src}\" muted loop playsinline class=\"object-cover w-full h-full\"></video><span class=\"absolute inset-x-0 bottom-0 bg-black/70 text-center text-xs opacity-100 p-1 text-white\">${label}</span></div>`;
+        }).join('')+`</div>`;
     }
 
-    /* ------------------- Rendering Logic ------------------- */
-    let current=0;
-    const wrapper=document.getElementById('carousel-wrapper');
-    const promptBox=document.getElementById('promptBox');
+    /* ---------------- Scripts Rendering ---------------- */
+    let idxScripts=0;
+    const wrapperScripts=document.getElementById('carousel-wrapper');
+    const promptScripts=document.getElementById('promptBox');
 
-    async function renderPage(){
-      wrapper.innerHTML='<span class="text-neutral-400">Loading&nbsp;videos…</span>';
-      const page=pages[current];
-      const models=await getModelsForId(page.id);
-      wrapper.innerHTML=buildGridHTML(models,page.id);
-      promptBox.innerHTML=`${page.prompt} <span class="text-neutral-500">(${page.meta})</span>`;
-      wrapper.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
+    async function renderScripts(){
+      wrapperScripts.innerHTML='<span class="text-neutral-400">Loading videos…</span>';
+      const page=scriptPages[idxScripts];
+      const folder=`data/scine_scripts/${page.id}/`;
+      const models=await getModels(page.id,folder,9,selectedCacheScripts);
+      wrapperScripts.innerHTML=buildGrid(models,folder,page.id,3);
+      promptScripts.innerHTML=`${page.prompt} <span class="text-neutral-500">(${page.meta})</span>`;
+      wrapperScripts.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
     }
 
-    document.getElementById('prevBtn').onclick=()=>{
-      current=(current-1+pages.length)%pages.length;
-      renderPage();
-    };
-    document.getElementById('nextBtn').onclick=()=>{
-      current=(current+1)%pages.length;
-      renderPage();
-    };
+    document.getElementById('prevBtn').onclick=()=>{idxScripts=(idxScripts-1+scriptPages.length)%scriptPages.length;renderScripts();};
+    document.getElementById('nextBtn').onclick=()=>{idxScripts=(idxScripts+1)%scriptPages.length;renderScripts();};
 
-    renderPage();
+    /* ---------------- Visuals Rendering ---------------- */
+    let idxVisuals=0;
+    const wrapperVisuals=document.getElementById('visuals-carousel-wrapper');
+    const promptVisuals=document.getElementById('visuals-promptBox');
+
+    async function renderVisuals(){
+      wrapperVisuals.innerHTML='<span class="text-neutral-400">Loading videos…</span>';
+      const page=visualPages[idxVisuals];
+      const folder=`data/scine_visuals/${page.id}/`;
+      const models=await getModels(page.id,folder,6,selectedCacheVisuals);
+      wrapperVisuals.innerHTML=buildGrid(models,folder,page.id,3);
+      promptVisuals.innerHTML=`${page.prompt} <span class="text-neutral-500">(${page.meta})</span>`;
+      wrapperVisuals.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
+    }
+
+    document.getElementById('prevVisBtn').onclick=()=>{idxVisuals=(idxVisuals-1+visualPages.length)%visualPages.length;renderVisuals();};
+    document.getElementById('nextVisBtn').onclick=()=>{idxVisuals=(idxVisuals+1)%visualPages.length;renderVisuals();};
+
+    /* ---------------- Initial Render ---------------- */
+    renderScripts();
+    renderVisuals();
   </script>
 </body>
 </html>
