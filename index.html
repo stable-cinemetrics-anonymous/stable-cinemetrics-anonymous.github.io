@@ -1,1 +1,155 @@
-init
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anonymous Video Benchmark</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hide-scrollbar::-webkit-scrollbar{display:none}
+    .hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+  </style>
+</head>
+<body class="bg-white text-neutral-900 min-h-screen">
+  <!-- Sticky TOC -->
+  <nav class="hidden md:block fixed left-0 top-0 h-full w-48 border-r border-gray-200 bg-white/90 backdrop-blur p-4">
+    <h2 class="font-semibold mb-4">Contents</h2>
+    <ul class="space-y-2 text-sm">
+      <li><a href="#scine-scripts" class="hover:underline">SCINE Scripts</a></li>
+      <li><a href="#scine-visuals" class="hover:underline">SCINE Visuals</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="md:ml-52 p-4 md:p-6 space-y-20">
+    <!-- SCINE Scripts Section -->
+    <section id="scine-scripts" class="space-y-6">
+      <h1 class="text-3xl md:text-4xl font-semibold text-center">SCINE Scripts</h1>
+      <p id="desc-scripts" class="max-w-3xl mx-auto text-center text-neutral-600"></p>
+
+      <div class="w-full max-w-6xl mx-auto flex justify-between items-center">
+        <button id="prevBtn" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">⟵ Prev</button>
+        <button id="nextBtn" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">Next ⟶</button>
+      </div>
+
+      <div id="carousel-wrapper" class="w-full max-w-6xl mx-auto min-h-[14rem] flex items-center justify-center">
+        <!-- populated dynamically -->
+      </div>
+      <div id="promptBox" class="max-w-5xl mx-auto text-base md:text-lg leading-relaxed text-center"></div>
+    </section>
+
+    <!-- SCINE Visuals Section -->
+    <section id="scine-visuals" class="space-y-6">
+      <h2 class="text-3xl font-semibold text-center">SCINE Visuals</h2>
+      <p id="desc-visuals" class="max-w-3xl mx-auto text-center text-neutral-600"></p>
+      <!-- future content -->
+    </section>
+  </main>
+
+  <script>
+    /* ----------------- Section Descriptions ---------------- */
+    const sectionDescriptions = {
+      scripts: 'Qualitative results on SCINE Scripts, across models, on different text prompts.',
+      visuals: 'Qualitative results on SCINE Visuals, across models, on different text prompts.'
+    };
+    document.getElementById('desc-scripts').textContent = sectionDescriptions.scripts;
+    document.getElementById('desc-visuals').textContent = sectionDescriptions.visuals;
+
+    /* ----------------------- Model Data ---------------------- */
+    // Full list of raw model identifiers (can be >9)
+    const modelNames = [
+      'PyramidFlow','vchitect_2.0','cogvideo_5b','easyanimate_5.1','hunyuan','ltx_video','mochi','wan_1b','wan_14b','luma_ray_2','minimax','pika_2.2'
+    ];
+
+    // Friendly display names
+    const modelDisplay = {
+      PyramidFlow:'Pyramid Flow','vchitect_2.0':'VChitect 2.0',cogvideo_5b:'CogVideo 5B','easyanimate_5.1':'EasyAnimate 5.1',hunyuan:'Hunyuan',
+      ltx_video:'LTX Video',mochi:'Mochi',wan_1b:'Wan 1B',wan_14b:'Wan 14B',luma_ray_2:'Luma Ray 2',minimax:'Minimax','pika_2.2':'Pika 2.2'
+    };
+
+    /* --------------- Prompts & Metadata per ID --------------- */
+    const pages=[
+      {id:'00011',prompt:'Inside a busy street corner, during the day, a street vendor gestures energetically while serving a hot dog to a customer. Meanwhile, hurried pedestrians navigate the crowded sidewalk, and a cyclist carefully maneuvers through slow-moving traffic in the background.',meta:'Concurrent Actions'},
+      {id:'00051',prompt:'At a wedding reception, the bride starts tossing her bouquet over her shoulder as, simultaneously, a group of bridesmaids begins jostling for position to catch it.',meta:'Overlapping Actions'},
+      {id:'00065',prompt:'In a park, a street performer juggles three brightly colored balls, maintaining a smooth, repeating cascade pattern.',meta:'Cyclic Actions'},
+      {id:'00114',prompt:'Medium shot of a lone astronaut planting a flag on the surface of Mars. The Earth hangs small in the black sky. Text appears etched onto the flagpole base: "For All Mankind". The text remains visible as the shot holds.',meta:'Text Generation'},
+      {id:'00145',prompt:'Two friends drive down a sunny desert highway in a convertible, wind in their hair. The passenger suddenly points off-road with wide eyes, "Whoa! Is that... a giant ball of yarn? We have to-- stop!"',meta:'Dialogues'},
+      {id:'00206',prompt:'In a small and otherwise barren park, amid cold daylight, a lone figure of an old man sits crouched on a swing. He looks up and frowns at the tears escaping his closed eyelids.',meta:'Emotion – Sadness'},
+      {id:'00740',prompt:'Daytime in a quiet suburban kitchen; a woman turns around and freezes, her eyes fixed on an open backdoor gently swinging.',meta:'Emotion – Surprise'},
+      {id:'01103',prompt:'At a desolate train platform, a small group of conspirators clusters around a cryptic map, their anxious eyes scanning their surroundings in a silent agreement of urgency',meta:'Genre – Thriller'},
+      {id:'00469',prompt:'During a lively outdoor concert in the park, a man offers his hand to a woman standing alone, inviting her to dance with him under the starlit sky.',meta:'Genre – Romance'},
+      {id:'00350',prompt:'Inside a cramped elevator, a woman carrying an enormous bouquet of balloons accidentally pops one, causing a chain reaction of popping balloons and startled yelps, with the petals covering every surface of the small space.',meta:'Genre – Comedy'}
+    ];
+
+    /* ------------------- Utilities ------------------- */
+    function shuffle(arr){
+      const a=[...arr];
+      for(let i=a.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [a[i],a[j]]=[a[j],a[i]];
+      }
+      return a;
+    }
+
+    // Cache to store chosen models per ID so we only pick once
+    const selectedModelsCache = {};
+
+    async function chooseModelsWithFiles(id, desired=9){
+      const folder=`data/scine_scripts/${id}/`;
+      const shuffled=shuffle(modelNames);
+      const chosen=[];
+      for(const m of shuffled){
+        try{
+          const resp=await fetch(`${folder}${m}_${id}.mp4`,{method:'HEAD'});
+          if(resp.ok){chosen.push(m);} // file exists
+          if(chosen.length===desired) break;
+        }catch(e){/* ignore fetch errors */}
+      }
+      return chosen;
+    }
+
+    async function getModelsForId(id){
+      if(selectedModelsCache[id]) return selectedModelsCache[id];
+      const models = await chooseModelsWithFiles(id,9);
+      selectedModelsCache[id] = models; // cache for future visits
+      return models;
+    }
+
+    function buildGridHTML(models,id){
+      const folder=`data/scine_scripts/${id}/`;
+      return `<div class="grid grid-cols-3 gap-0 hide-scrollbar">`+
+        models.map(m=>{
+          const src=`${folder}${m}_${id}.mp4`;
+          const label=modelDisplay[m]||m;
+          return `<div class=\"relative group w-full h-40 md:h-48 overflow-hidden border border-gray-200\"><video src=\"${src}\" muted loop playsinline class=\"object-cover w-full h-full\"></video><span class=\"absolute inset-x-0 bottom-0 bg-black/70 text-center text-xs opacity-0 group-hover:opacity-100 transition-opacity p-1 text-white\">${label}</span></div>`;
+        }).join('')+
+        `</div>`;
+    }
+
+    /* ------------------- Rendering Logic ------------------- */
+    let current=0;
+    const wrapper=document.getElementById('carousel-wrapper');
+    const promptBox=document.getElementById('promptBox');
+
+    async function renderPage(){
+      wrapper.innerHTML='<span class="text-neutral-400">Loading&nbsp;videos…</span>';
+      const page=pages[current];
+      const models=await getModelsForId(page.id);
+      wrapper.innerHTML=buildGridHTML(models,page.id);
+      promptBox.innerHTML=`${page.prompt} <span class="text-neutral-500">(${page.meta})</span>`;
+      wrapper.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
+    }
+
+    document.getElementById('prevBtn').onclick=()=>{
+      current=(current-1+pages.length)%pages.length;
+      renderPage();
+    };
+    document.getElementById('nextBtn').onclick=()=>{
+      current=(current+1)%pages.length;
+      renderPage();
+    };
+
+    renderPage();
+  </script>
+</body>
+</html>
