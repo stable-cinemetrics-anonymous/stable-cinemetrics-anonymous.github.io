@@ -1,0 +1,16 @@
+Category | Question | wan_1b | ltx_video
+Events -> Types -> Actions -> Interaction Types -> Interactive | Does the video clearly depict merchants engaging in interactive bartering, with visible exchange and dynamic interactions among them? | 2.33 | 1.67
+Events -> Types -> Actions -> Interaction Types -> Standalone | Does the video effectively show the baskets overflowing with spices as a distinct, standalone action event? | 4.00 | 1.67
+Camera -> Extrinsics -> Angle | Does the video clearly depict a high-angle viewpoint consistent with the prompt's description? | 4.33 | 3.00
+Camera -> Trajectory -> Camera Movement -> 3D | Is there an evident crane shot that demonstrates dynamic 3D camera movement in the video as described? | 4.33 | 3.00
+Camera -> Intrinsics -> Lens Size | Does the video incorporate a wide lens perspective that captures expansive views as described in the prompt? | 4.33 | 3.00
+Lighting -> Lighting Conditions | Is the clear daylight condition effectively represented in the video with a balanced ambient illumination that matches the prompt's description? | 4.33 | 2.33
+Lighting -> Effects -> Shadows -> Hard | Are the hard shadows distinctly visible and well-defined in the video to create the intended dramatic lighting effect? | 4.67 | 3.00
+Setup -> Scene -> Set Design -> Backdrop -> Location | Is Marrakech's marketplace visually distinct and accurately represented in the generated video? | 4.33 | 1.67
+Setup -> Scene -> Set Design -> Backdrop -> Time of Day | Does the generated video clearly depict the brightness and atmosphere of a midday setting? | 4.67 | 3.00
+Setup -> Scene -> Set Design -> Backdrop -> Setting | Is the outdoor nature of the marketplace convincingly represented in the generated scene? | 4.00 | 1.33
+Setup -> Scene -> Texture -> Color Palette | Are the saffron and terracotta hues prominently and vividly rendered in the video’s environment? | 4.00 | 2.33
+Setup -> Subjects -> Class | Are the merchants clearly depicted as key subjects within the marketplace scene in the video? | 3.67 | 1.67
+Setup -> Scene -> Set Design -> Props -> Description | Are the handwoven baskets and spices realistically and artistically rendered as essential props in the scene? | 4.33 | 1.33
+Setup -> Text Generation | Is the 'Souk el Khemis' text clearly and consistently generated on screen as per the prompt? | 1.33 | 1.33
+Setup -> Scene -> Geometry -> Space -> Depth | Does the video effectively capture a deep perspective, contributing to a convincing sense of spatial depth in the scene? | 4.00 | 1.33

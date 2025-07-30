@@ -1,0 +1,3 @@
+Category | Question | luma_ray2 | mochi
+Events -> Types -> Actions -> Interaction Types -> Standalone | Is the locomotive's rapid motion visually depicted as a clear, stand-alone action, moving fast along the tracks without interacting with other elements? | 4.33 | 1.33
+Events -> Types -> Actions | Is the action of blowing steam clearly shown as a distinct and noticeable effect emerging from the locomotive? | 4.67 | 1.00

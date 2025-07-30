@@ -1,0 +1,3 @@
+Category | Question | wan_1b | ltx_video
+Events -> Types -> Actions -> Interaction Types -> Interactive | Does the generated video clearly show the inventor and the protégé engaging in interactive action while examining the blueprints? | 4.33 | 1.67
+Events -> Types -> Emotions -> Expression Types -> Implicit | Does the generated video effectively portray the characters' animated facial expressions that subtly convey ideas and promise? | 4.00 | 1.33

@@ -1,0 +1,5 @@
+Category | Question | hunyuan | wan_14b
+Events -> Types -> Actions -> Interaction Types -> Standalone | Does the video clearly depict the skateboarder losing balance as an isolated action? | 3.67 | 4.33
+Events -> Types -> Actions -> Interaction Types -> Interactive | Does the video show a clear interaction where the skateboarder collides with the trash bin? | 1.33 | 5.00
+Events -> Types -> Actions | Is the toppling of the trash bin visibly and accurately represented in the video after the collision? | 1.33 | 4.33 
+Events -> Types -> Actions -> Portrayed as -> Temporal | Does the video effectively portray the scattering of litter as a direct result of the trash bin toppling over? | 1.33 | 4.67

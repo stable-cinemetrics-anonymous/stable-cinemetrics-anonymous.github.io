@@ -1,0 +1,5 @@
+Category | Question | hunyuan | minimax
+Setup -> Scene -> Set Design -> Backdrop -> Setting | Does the generated video clearly depict an interior basement setting with cramped space, low ceilings, and deteriorating architectural features? | 2.33 | 4.33
+Setup -> Scene -> Set Design -> Environment | Does the video effectively portray a dilapidated environment with textured details like sagging beams, water-stained walls, and pervasive grime as described in the prompt? | 2.67 | 4.33
+Setup -> Scene -> Set Design -> Props -> Description | Are there prominently featured props, such as a rusted iron trapdoor and a weathered lightbulb with frayed wiring, that mirror the detailed descriptions provided in the prompt? | 1.00 | 3.67
+Setup -> Subjects -> Class | Is there a clearly depicted subject—a man with a threadbare flannel shirt, disheveled hair, and a grimy appearance—present in the video as detailed in the prompt? | 3.33 | 4.00

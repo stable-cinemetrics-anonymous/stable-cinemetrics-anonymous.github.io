@@ -1,0 +1,7 @@
+Category | Question | wan_1b | ltx_video
+Setup -> Scene | Does the generated video clearly depict the massive fantasy battlefield with its cold steel sky and mist-shrouded hills in a cohesive and detailed manner? | 4.33 | 2.67
+Setup -> Scene -> Geometry -> Frame -> Lines | Does the generated video include prominent diagonal lines, such as the diagonal smoke trails, that effectively guide the viewer's eye across the scene? | 4.33 | 3.00
+Setup -> Scene -> Set Design -> Environment -> Elements | Does the generated video effectively represent environmental elements like smoke, fire, and ash that contribute to the dramatic atmosphere of the battlefield? | 4.33 | 3.00
+Setup -> Text Generation | Does the generated video display the dynamic text 'The Final Stand' in a manner that integrates seamlessly with the overall scene, including the described disintegration effect within the cloud formations? | 3.33 | 1.33
+Setup -> Subjects -> Class | Does the generated video clearly depict the subjects, such as the clashing armies of armored knights and phantom figures engaged in combat, as described in the scene? | 4.00 | 1.67
+Setup -> Scene -> Set Design -> Props | Does the generated video accurately render the detailed props, such as burning siege engines, fallen banners with shattered sigils, and broken spears, that enrich the battlefield environment? | 4.33 | 2.67

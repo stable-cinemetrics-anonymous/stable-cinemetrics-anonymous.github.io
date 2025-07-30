@@ -1,0 +1,15 @@
+Category | Question | minimax | ltx_video
+Events -> Types -> Actions | Is the queen clearly shown engaging her assembled court by addressing them in a dynamic, interactive manner? | 4.33 | 2.00
+Events -> Types -> Actions | Does the video visibly depict the queen performing a deliberate gesture toward the horizon that reinforces her leadership? | 3.67 | 1.67
+Events -> Types -> Emotions -> Expression Types -> Implicit | Is the centaur’s facial expression, particularly the tightened jaw signaling tension, clearly evident and consistent in the video? | 3.67 | 1.67
+Camera -> Trajectory -> Camera Movement -> 3D | Does the video clearly demonstrate a smooth push in movement that brings the viewer closer to the subject, maintaining the low angle perspective as described? | 4.00 | 2.00
+Camera -> Extrinsics -> Angle | Is the low angle shot distinctly visible in the video, effectively portraying the subject from a perspective that enhances visual depth and drama as specified in the prompt? | 3.67 | 1.67
+Lighting -> Sources -> Natural Light | Is the natural light from the triple sunset clearly present and effectively illuminating the scene according to the prompt? | 4.00 | 1.67
+Lighting -> Color Temperature | Are the amber and violet color temperatures visibly and effectively represented in the scene, matching the prompt's description? | 3.67 | 2.00
+Lighting -> Effects -> Shadows -> Hard | Do the hard, well-defined shadows appear as described in the prompt and contribute to the overall lighting effect in the video? | 3.67 | 1.67
+Setup -> Scene -> Set Design -> Backdrop -> Location | Does the generated video clearly depict the crystal palace with its detailed prismatic spires and architectural elements as the backdrop? | 3.67 | 1.67
+Setup -> Scene -> Set Design -> Backdrop -> Time of Day | Does the video accurately capture a sunset environment, specifically illustrating the unique triple or alien sunset with vibrant amber and violet hues? | 4.00 | 2.00
+Setup -> Subjects -> Class | Are all the distinct subject classes—namely the winged queen, griffins, centaurs, and dryads—clearly and accurately represented in the video? | 3.67 | 2.00
+Setup -> Scene -> Geometry -> Frame -> Lines | Does the video incorporate clear diagonal lines in its composition, particularly in the design of the staircases, to enhance the overall geometric framing? | 3.67 | 2.00
+Setup -> Scene -> Geometry -> Space -> Depth | Is there a noticeable sense of spatial depth in the video, as evidenced by layered, terraced formations and staggered architectural elements? | 4.00 | 2.00
+Setup -> Scene -> Set Design -> Props -> Description | Is the oak staff, used as a distinctive prop by the dryad, accurately rendered and well-integrated within the scene? | 4.00 | 2.33

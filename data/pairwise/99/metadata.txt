@@ -1,0 +1,4 @@
+Category | Question | wan_1b | ltx_video
+Events -> Types -> Dialogues | Does the video clearly depict a dialogue exchange that captures the depth and emotional tone of the heartfelt conversation? | 4.33 | 1.67
+Events -> Types -> Emotions -> Expression Types -> Explicit | Does the video visibly present genuine, clear facial expressions such as heartfelt smiles that convey the intended emotion? | 4.67 | 2.33
+Events -> Types -> Actions -> Interaction Types -> Interactive | Does the video effectively show subtle, interactive non-verbal gestures like nods that enhance the portrayal of the conversation? | 4.67 | 2.00

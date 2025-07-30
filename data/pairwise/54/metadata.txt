@@ -1,0 +1,2 @@
+Category | Question | wan_14b | PyramidFlow
+Events -> Types -> Actions | Does the video clearly show the physical action of sketching a detailed portrait with deliberate pencil movements? | 4.67 | 1.33

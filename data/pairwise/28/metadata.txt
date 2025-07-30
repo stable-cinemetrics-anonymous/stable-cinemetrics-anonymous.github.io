@@ -1,0 +1,7 @@
+Category | Question | easyanimate_5.1 | wan_14b
+Setup -> Scene -> Set Design -> Backdrop -> Setting | Does the generated video clearly depict an interior environment, specifically a grand bank's opulent chamber? | 1.00 | 3.33
+Setup -> Scene -> Set Design -> Environment -> Style | Does the video accurately capture the elaborate Baroque style and opulent decorative environment as described in the prompt? | 2.33 | 3.00
+Setup -> Scene -> Set Design -> Props -> Description | Are the detailed props—like the filigreed key, main vault, and antique grandfather clock—visually represented with the intricate designs and materials described in the prompt? | 1.67 | 3.33
+Setup -> Scene -> Geometry -> Frame -> Lines | Does the generated video effectively incorporate strong diagonal lines in its composition, reflective of the pendulum's movement as described? | 1.33 | 3.33
+Setup -> Subjects -> Class | Is the manager character clearly depicted as an integral part of the opulent bank scene in the generated video? | 1.00 | 3.67
+Setup -> Scene -> Set Design -> Backdrop -> Location | Does the video establish the bank as a recognizable location within the ornate backdrop, reinforcing the scene’s setting? | 1.00 | 3.33

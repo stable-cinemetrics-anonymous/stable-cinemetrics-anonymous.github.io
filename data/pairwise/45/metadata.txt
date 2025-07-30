@@ -1,0 +1,13 @@
+Category | Question | minimax | ltx_video
+Events -> Types -> Actions | Is the action of cradling the translucent orchid clearly and dynamically depicted in the video? | 3.67 | 2.00
+Events -> Types -> Actions | Is the action of supporting the orchid’s delicate stem visually clear and appropriately timed in the video? | 3.67 | 1.33
+Events -> Types -> Change in Environment | Is the environmental change, reflected by a soft breeze stirring strands of chestnut hair, effectively and naturally represented in the video? | 3.67 | 2.00
+Camera -> Intrinsics -> Depth of Field | Does the generated video clearly exhibit a shallow depth of field effect with a sharply focused subject and a softly blurred background as described in the prompt? | 3.67 | 1.67
+Lighting -> Sources -> Natural Light | Does the video clearly depict natural sunlight as the primary lighting source, as indicated by the sun-dappled effect? | 4.00 | 2.33
+Lighting -> Conditions | Is the golden hour lighting condition consistently and effectively portrayed in the video? | 4.00 | 2.67
+Lighting -> Color Temperature | Does the video maintain a warm color temperature that reflects the 'warm amber light' described in the prompt? | 4.00 | 2.00
+Setup -> Scene -> Set Design -> Backdrop -> Setting | Does the video clearly depict an outdoor garden setting with natural elements, as described by the 'sun-dappled garden' in the prompt? | 4.33 | 2.33
+Setup -> Scene -> Set Design -> Backdrop -> Time of Day | Does the video demonstrate the warm, atmospheric lighting of the golden hour, aligning with the prompt's description? | 4.00 | 2.00
+Setup -> Scene -> Set Design -> Props | Are the key props (the stone table, botanical journal, and orchid) accurately and richly depicted with their described textures and details in the video? | 4.00 | 2.33
+Setup -> Subjects -> Class | Is the botanist presented as the clear central subject in the video, with visual details (attire and characteristic features) that match the prompt? | 3.67 | 1.67
+Setup -> Scene -> Set Design -> Environment -> Background | Does the video include a lush, layered background with emerald foliage that effectively reinforces the garden atmosphere as described? | 3.67 | 2.00

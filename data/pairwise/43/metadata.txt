@@ -1,0 +1,9 @@
+Category | Question | easyanimate_5.1 | wan_14b
+Camera -> Creative Intent -> Shot Size | Does the video exhibit a medium-full shot size that appropriately frames the subjects within the scene? | 1.67 | 4.33
+Camera -> Creative Intent -> Framing | Is the two-shot framing clearly visible, effectively positioning two subjects within the frame? | 3.00 | 3.67
+Camera -> Intrinsics -> Depth of Field | Does the generated video demonstrate a soft depth of field effect where the background blurs gently while keeping the subject in focus? | 1.33 | 2.67
+Camera -> Intrinsics -> Exposure -> Aperture | Is the wide aperture effect apparent in the video, contributing to a shallow depth of field with noticeable bokeh? | 2.00 | 3.00
+Camera -> Extrinsics -> Angle | Does the video clearly present a ground-level camera angle that provides an upward perspective on the scene? | 1.67 | 4.33
+Camera -> Trajectory -> Camera Movement -> 2D | Is there a distinct tilt-up camera movement in the video that shifts the perspective vertically as described? | 1.67 | 4.33
+Camera -> Trajectory -> Gear | Does the video incorporate a smooth and stabilized dolly movement that effectively transitions the camera's position as described? | 3.67 | 4.33
+Camera -> Intrinsics -> Exposure -> ISO | Is the low ISO setting clearly evident in the video, contributing to crisp clarity under daylight conditions? | 2.00 | 4.33

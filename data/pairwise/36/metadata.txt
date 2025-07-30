@@ -1,0 +1,7 @@
+Category | Question | minimax | ltx_video
+Setup -> Scene -> Set Design -> Backdrop -> Location | Does the generated video visually represent a forgotten castle with decayed architectural features that clearly define the location setting? | 4.00 | 2.33
+Setup -> Scene -> Set Design -> Backdrop -> Setting | Is the outdoor setting, specifically the balcony of a castle, effectively depicted in the generated video? | 4.00 | 2.00
+Setup -> Subjects -> Class | Are both the adventurer and the gryphon clearly visible and accurately portrayed as the primary subjects in the generated video? | 3.67 | 2.33
+Setup -> Scene -> Set Design -> Props | Does the generated video prominently feature a magical map with detailed attributes such as a faded vellum surface and ethereal swirling visions, as described in the prompt? | 4.33 | 2.00
+Setup -> Scene -> Geometry -> Frame -> Lines | Are the vertical lines, produced by cracked pillars and decaying structures, effectively used to frame the overall scene in the generated video? | 4.00 | 2.00
+Setup -> Scene -> Texture | Are the textured details—like the moss-covered surfaces, worn fabrics of the adventurer’s attire, and weathered stone elements—visually and convincingly rendered in the generated video? | 3.67 | 2.00

@@ -1,0 +1,3 @@
+Category | Question | hunyuan | wan_14b
+Events -> Types -> Actions | Does the video clearly depict the couple walking and navigating through an alley as described in the prompt? | 1.67 | 5.00
+Events -> Types -> Actions -> Interaction Types -> Interactive | Does the video effectively show the couple interacting by holding each other close during their walk? | 2.33 | 5.00

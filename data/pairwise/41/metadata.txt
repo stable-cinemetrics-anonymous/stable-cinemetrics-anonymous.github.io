@@ -1,0 +1,8 @@
+Category | Question | minimax | ltx_video
+Setup -> Scene -> Set Design -> Backdrop -> Setting | Is the scene unmistakably set in an outdoor market environment that conveys an exterior setting? | 3.67 | 1.67
+Setup -> Scene -> Geometry -> Frame -> Lines | Are the diagonal steam lines visually prominent and do they guide the viewer’s attention within the scene? | 3.33 | 1.33
+Setup -> Subjects -> Class | Are both the street vendor and the parrot depicted as distinct, well-defined subjects in the scene? | 4.33 | 2.33
+Setup -> Subjects -> Costume | Is the vendor's quirky, patterned apron clearly visible and detailed as part of their costume in the generated video? | 4.33 | 2.67
+Setup -> Scene -> Set Design -> Props -> Class | Are the props like the pancake and clay pots distinctly rendered and integrated within the scene’s overall composition? | 3.67 | 2.00
+Setup -> Scene -> Set Design -> Environment -> Elements | Are environmental elements like smoke and flour dust effectively incorporated and visually consistent with the scene's atmosphere? | 4.00 | 2.33
+Setup -> Scene -> Set Design -> Props -> Material | Are the material qualities, such as the weathered wood of the counter and the earthy texture of the clay pots, clearly represented in the video? | 4.33 | 3.00

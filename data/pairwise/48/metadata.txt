@@ -1,0 +1,7 @@
+Category | Question | wan_1b | ltx_video
+Setup -> Scene -> Texture -> Contrast | Does the video clearly depict high contrast between bright sunlight and deep shadows across the scene? | 4.00 | 1.67
+Setup -> Scene -> Geometry -> Frame -> Lines | Are prominent diagonal shadows present in the video that guide the viewer’s eye across the frame? | 2.33 | 2.00
+Setup -> Scene -> Geometry -> Space -> Depth | Does the video exhibit a deep spatial arrangement with clear separation between the foreground, midground, and background elements? | 2.67 | 2.00
+Setup -> Subjects -> Class | Are the metallic beetles clearly presented as intentional subjects in the video, with distinctive visual features? | 4.33 | 1.67
+Setup -> Scene -> Set Design -> Backdrop | Does the video effectively portray an ancient, crumbling backdrop featuring ruins, weathered sandstone columns, and collapsed architecture? | 3.67 | 1.33
+Setup -> Scene -> Set Design -> Props | Are the archaeological fragments and accumulated debris clearly integrated as props that enhance the setting in the video? | 2.67 | 1.33

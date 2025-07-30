@@ -1,0 +1,10 @@
+Category | Question | easyanimate_5.1 | luma_ray2
+Camera -> Intrinsics -> Lens Size | Does the video clearly exhibit the characteristics of a telephoto lens, such as a narrow field of view and compressed background? | 2.33 | 4.33
+Camera -> Intrinsics -> Exposure -> Aperture | Is the wide aperture effect evident in the video, contributing to a shallow depth of field and selective focus? | 2.33 | 5.00
+Camera -> Intrinsics -> Depth of Field | Does the video showcase a soft depth of field that effectively isolates the subject from the background? | 2.67 | 4.67
+Camera -> Creative Intent -> Shot Size | Is the medium-full shot composition clearly visible in the video, capturing the subjects and environment as intended? | 1.00 | 3.00
+Camera -> Extrinsics -> Angle | Is the high-angle perspective clearly demonstrated in the video, influencing the framing and subject portrayal? | 1.33 | 2.33
+Camera -> Trajectory -> Camera Movement -> 2D | Does the video effectively incorporate a smooth zoom in effect that adds to the storytelling? | 1.67 | 3.33
+Camera -> Trajectory -> Gear | Are the dolly movement and the use of a stabilized pedestal rig clearly executed in the video, ensuring smooth camera operation? | 1.67 | 3.00
+Camera -> Intrinsics -> Exposure -> ISO | Is the medium ISO setting visibly reflected in the video, balancing exposure and grain as described? | 2.00 | 4.33
+Camera -> Creative Intent -> Shot Size | Do the close-up and extreme close-up shots in the video effectively highlight the intended details and emotions through precise framing? | 1.33 | 4.33

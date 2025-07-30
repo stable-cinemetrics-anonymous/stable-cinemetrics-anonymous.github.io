@@ -1,0 +1,12 @@
+Category | Question | hunyuan | minimax
+Camera -> Trajectory -> Camera Movement -> 3D | Does the video clearly demonstrate a dynamic tracking camera movement that captures spatial depth as described? | 1.33 | 3.67
+Camera -> Trajectory -> Gear | Is the use of a stabilizer apparent in the video to ensure smooth camera movement as specified in the prompt? | 1.33 | 4.00
+Camera -> Intrinsics -> Lens Size | Does the video visually reflect the characteristics associated with a medium lens? | 3.00 | 3.00
+Camera -> Intrinsics -> Depth of Field | Is the shallow depth of field effect evident in the video, isolating the subject effectively? | 2.00 | 4.33
+Camera -> Intrinsics -> Exposure -> Aperture | Does the video demonstrate the wide aperture effect in its lighting and depth of field as described? | 2.00 | 3.67
+Camera -> Intrinsics -> Exposure -> ISO | Does the video ensure the detail preservation and clarity that are typical of a medium ISO setting? | 2.00 | 3.00
+Lighting -> Sources -> Natural Light | Does the video clearly depict natural light sources such as golden hour sunlight and ambient light as described? | 3.00 | 4.33
+Lighting -> Conditions | Is the golden hour lighting condition visually evident in the scene with warm, directional light? | 2.33 | 4.33
+Lighting -> Effects -> Shadows | Are the elongated shadows rendered accurately and in line with the golden hour lighting described? | 2.00 | 4.67
+Lighting -> Effects -> Reflection | Does the video effectively capture the reflective quality of light on wet surfaces as described? | 3.00 | 3.67
+Lighting -> Lighting Position | Is the backlighting effect clearly visible, enhancing the silhouette as specified in the prompt? | 1.67 | 4.67

@@ -1,0 +1,3 @@
+Category | Question | PyramidFlow | wan_1b
+Events -> Types -> Actions | Does the video clearly depict the caterpillars initiating their journey across the giant leaf bridge as described? | 1.00 | 5.00
+Events -> Types -> Actions -> Interaction Types -> Interactive | Is the synchronized and coordinated movement of the caterpillars visually and effectively represented in the video? | 1.33 | 4.67

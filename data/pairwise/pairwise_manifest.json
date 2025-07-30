@@ -1,0 +1,272 @@
+[
+  {
+    "id": "21",
+    "videoA": "Ray2_00750.mp4",
+    "videoB": "easyanimate5.1_00750.mp4",
+    "modelA": "Luma Ray 2",
+    "modelB": "Easy Animate 5.1",
+    "prompt": "Inside a hospital delivery room filmed with a telephoto lens at wide aperture, medical staff surround a mother in labor in a medium-full shot. Using a high-angle dolly movement that slowly zooms in, all eyes focus intently through a soft depth of field, the foreground and midground gently dissolving as the camera isolates the newborn\u2019s first cry in a trembling close-up. Medium ISO renders muted clinical lighting with subtle grain, the framing tightening to an extreme close-up of tiny fists and tear-streaked cheeks, the unbroken shot sustained by a stabilized pedestal rig.",
+    "meta": "Category | Question | Easy Animate 5.1 | Luma Ray 2\nCamera -> Intrinsics -> Lens Size | Does the video clearly exhibit the characteristics of a telephoto lens, such as a narrow field of view and compressed background? | 2.33 | 4.33\nCamera -> Intrinsics -> Exposure -> Aperture | Is the wide aperture effect evident in the video, contributing to a shallow depth of field and selective focus? | 2.33 | 5.00\nCamera -> Intrinsics -> Depth of Field | Does the video showcase a soft depth of field that effectively isolates the subject from the background? | 2.67 | 4.67\nCamera -> Creative Intent -> Shot Size | Is the medium-full shot composition clearly visible in the video, capturing the subjects and environment as intended? | 1.00 | 3.00\nCamera -> Extrinsics -> Angle | Is the high-angle perspective clearly demonstrated in the video, influencing the framing and subject portrayal? | 1.33 | 2.33\nCamera -> Trajectory -> Camera Movement -> 2D | Does the video effectively incorporate a smooth zoom in effect that adds to the storytelling? | 1.67 | 3.33\nCamera -> Trajectory -> Gear | Are the dolly movement and the use of a stabilized pedestal rig clearly executed in the video, ensuring smooth camera operation? | 1.67 | 3.00\nCamera -> Intrinsics -> Exposure -> ISO | Is the medium ISO setting visibly reflected in the video, balancing exposure and grain as described? | 2.00 | 4.33\nCamera -> Creative Intent -> Shot Size | Do the close-up and extreme close-up shots in the video effectively highlight the intended details and emotions through precise framing? | 1.33 | 4.33"
+  },
+  {
+    "id": "27",
+    "videoA": "Minimax_00457.mp4",
+    "videoB": "ltx_00457.mp4",
+    "modelA": "Minimax",
+    "modelB": "LTX",
+    "prompt": "On the steps of a colossal, crystal palace that shimmers under a triple sunset, a proud, winged queen passionately addresses her assembled court. Her iridescent wings catch refractive light from the prismatic spires as she gestures toward the horizon. Diverse mythical creatures\u2014griffins with obsidian talons, centaurs bearing engraved armor, and dryads with bark-textured skin\u2014fill the terraced steps in deep, staggered formations. The camera glides slowly upward, pushing in from a low angle, framing her against the triune suns in a single clean manner while capturing subtle tension in a centaur's tightened jaw and a dryad's whitened knuckles gripping her oak staff. Amber and violet hues from the alien sunset cast long, angular, hard shadows across the geometrically precise staircases with diagonal lines.",
+    "meta": "Category | Question | Minimax | LTX\nEvents -> Types -> Actions | Is the queen clearly shown engaging her assembled court by addressing them in a dynamic, interactive manner? | 4.33 | 2.00\nEvents -> Types -> Actions | Does the video visibly depict the queen performing a deliberate gesture toward the horizon that reinforces her leadership? | 3.67 | 1.67\nEvents -> Types -> Emotions -> Expression Types -> Implicit | Is the centaur\u2019s facial expression, particularly the tightened jaw signaling tension, clearly evident and consistent in the video? | 3.67 | 1.67\nCamera -> Trajectory -> Camera Movement -> 3D | Does the video clearly demonstrate a smooth push in movement that brings the viewer closer to the subject, maintaining the low angle perspective as described? | 4.00 | 2.00\nCamera -> Extrinsics -> Angle | Is the low angle shot distinctly visible in the video, effectively portraying the subject from a perspective that enhances visual depth and drama as specified in the prompt? | 3.67 | 1.67\nLighting -> Sources -> Natural Light | Is the natural light from the triple sunset clearly present and effectively illuminating the scene according to the prompt? | 4.00 | 1.67\nLighting -> Color Temperature | Are the amber and violet color temperatures visibly and effectively represented in the scene, matching the prompt's description? | 3.67 | 2.00\nLighting -> Effects -> Shadows -> Hard | Do the hard, well-defined shadows appear as described in the prompt and contribute to the overall lighting effect in the video? | 3.67 | 1.67\nSetup -> Scene -> Set Design -> Backdrop -> Location | Does the generated video clearly depict the crystal palace with its detailed prismatic spires and architectural elements as the backdrop? | 3.67 | 1.67\nSetup -> Scene -> Set Design -> Backdrop -> Time of Day | Does the video accurately capture a sunset environment, specifically illustrating the unique triple or alien sunset with vibrant amber and violet hues? | 4.00 | 2.00\nSetup -> Subjects -> Class | Are all the distinct subject classes\u2014namely the winged queen, griffins, centaurs, and dryads\u2014clearly and accurately represented in the video? | 3.67 | 2.00\nSetup -> Scene -> Geometry -> Frame -> Lines | Does the video incorporate clear diagonal lines in its composition, particularly in the design of the staircases, to enhance the overall geometric framing? | 3.67 | 2.00\nSetup -> Scene -> Geometry -> Space -> Depth | Is there a noticeable sense of spatial depth in the video, as evidenced by layered, terraced formations and staggered architectural elements? | 4.00 | 2.00\nSetup -> Scene -> Set Design -> Props -> Description | Is the oak staff, used as a distinctive prop by the dryad, accurately rendered and well-integrated within the scene? | 4.00 | 2.33"
+  },
+  {
+    "id": "28",
+    "videoA": "easyanimate5.1_00410.mp4",
+    "videoB": "wan14b_00410.mp4",
+    "modelA": "Easy Animate 5.1",
+    "modelB": "Wan 14B",
+    "prompt": "Inside a grand bank's Baroque-style opulent chamber with verdigris and gold-leaf accents bleeding into muted burgundy walls, the manager examines the filigreed key to the main vault under the observant eye of a brass antique grandfather clock. Its pendulum cuts diagonal lines through the frame with metronomic precision, the clock's mahogany casing bearing intricate floral marquetry that mirrors the vault's engravings, the chamber's spatial tension tightening with every swing.",
+    "meta": "Category | Question | Easy Animate 5.1 | Wan 14B\nSetup -> Scene -> Set Design -> Backdrop -> Setting | Does the generated video clearly depict an interior environment, specifically a grand bank's opulent chamber? | 1.00 | 3.33\nSetup -> Scene -> Set Design -> Environment -> Style | Does the video accurately capture the elaborate Baroque style and opulent decorative environment as described in the prompt? | 2.33 | 3.00\nSetup -> Scene -> Set Design -> Props -> Description | Are the detailed props\u2014like the filigreed key, main vault, and antique grandfather clock\u2014visually represented with the intricate designs and materials described in the prompt? | 1.67 | 3.33\nSetup -> Scene -> Geometry -> Frame -> Lines | Does the generated video effectively incorporate strong diagonal lines in its composition, reflective of the pendulum's movement as described? | 1.33 | 3.33\nSetup -> Subjects -> Class | Is the manager character clearly depicted as an integral part of the opulent bank scene in the generated video? | 1.00 | 3.67\nSetup -> Scene -> Set Design -> Backdrop -> Location | Does the video establish the bank as a recognizable location within the ornate backdrop, reinforcing the scene\u2019s setting? | 1.00 | 3.33"
+  },
+  {
+    "id": "31",
+    "videoA": "ltx_00125.mp4",
+    "videoB": "wan1b_00125.mp4",
+    "modelA": "LTX",
+    "modelB": "Wan 1B",
+    "prompt": "High angle crane shot descending over Marrakech's midday marketplace, wide lens capturing labyrinthine alleys saturated in saffron and terracotta hues under clear daylight. Handwoven baskets overflow with spices while merchants in Berber-patterned djellabahs barter fiercely, their hard shadows stretching across sun-baked clay walls as \"Souk el Khemis\" text shimmers through heat waves distorting the deep perspective.",
+    "meta": "Category | Question | Wan 1B | LTX\nEvents -> Types -> Actions -> Interaction Types -> Interactive | Does the video clearly depict merchants engaging in interactive bartering, with visible exchange and dynamic interactions among them? | 2.33 | 1.67\nEvents -> Types -> Actions -> Interaction Types -> Standalone | Does the video effectively show the baskets overflowing with spices as a distinct, standalone action event? | 4.00 | 1.67\nCamera -> Extrinsics -> Angle | Does the video clearly depict a high-angle viewpoint consistent with the prompt's description? | 4.33 | 3.00\nCamera -> Trajectory -> Camera Movement -> 3D | Is there an evident crane shot that demonstrates dynamic 3D camera movement in the video as described? | 4.33 | 3.00\nCamera -> Intrinsics -> Lens Size | Does the video incorporate a wide lens perspective that captures expansive views as described in the prompt? | 4.33 | 3.00\nLighting -> Lighting Conditions | Is the clear daylight condition effectively represented in the video with a balanced ambient illumination that matches the prompt's description? | 4.33 | 2.33\nLighting -> Effects -> Shadows -> Hard | Are the hard shadows distinctly visible and well-defined in the video to create the intended dramatic lighting effect? | 4.67 | 3.00\nSetup -> Scene -> Set Design -> Backdrop -> Location | Is Marrakech's marketplace visually distinct and accurately represented in the generated video? | 4.33 | 1.67\nSetup -> Scene -> Set Design -> Backdrop -> Time of Day | Does the generated video clearly depict the brightness and atmosphere of a midday setting? | 4.67 | 3.00\nSetup -> Scene -> Set Design -> Backdrop -> Setting | Is the outdoor nature of the marketplace convincingly represented in the generated scene? | 4.00 | 1.33\nSetup -> Scene -> Texture -> Color Palette | Are the saffron and terracotta hues prominently and vividly rendered in the video\u2019s environment? | 4.00 | 2.33\nSetup -> Subjects -> Class | Are the merchants clearly depicted as key subjects within the marketplace scene in the video? | 3.67 | 1.67\nSetup -> Scene -> Set Design -> Props -> Description | Are the handwoven baskets and spices realistically and artistically rendered as essential props in the scene? | 4.33 | 1.33\nSetup -> Text Generation | Is the 'Souk el Khemis' text clearly and consistently generated on screen as per the prompt? | 1.33 | 1.33\nSetup -> Scene -> Geometry -> Space -> Depth | Does the video effectively capture a deep perspective, contributing to a convincing sense of spatial depth in the scene? | 4.00 | 1.33"
+  },
+  {
+    "id": "33",
+    "videoA": "wan1b_00076.mp4",
+    "videoB": "ltx_00076.mp4",
+    "modelA": "Wan 1B",
+    "modelB": "LTX",
+    "prompt": "Footprints pressed into fresh snow gradually vanish as disturbed snow lifts and settles in whispering flurries, leaving a smooth surface under a muted cobalt sky. The stark high-contrast indentations dissolve into pristine whiteness through deep spatial layers, their angular edges softening to match the clean geometry of the blanketed landscape.",
+    "meta": "Category | Question | Wan 1B | LTX\nSetup -> Scene -> Texture -> Contrast | Does the video display pronounced high-contrast texture details\u2014for example, distinct light and dark areas on the snow surface\u2014as described in the prompt? | 4.00 | 1.67\nSetup -> Scene -> Geometry -> Space -> Depth | Does the video effectively portray deep spatial layers that enhance the three-dimensional depth of the snowy landscape as described in the prompt? | 4.00 | 1.00\nSetup -> Scene -> Set Design -> Environment -> Elements | Is the snowy environment, including elements such as fresh, disturbed snow and the imprint of footprints, clearly rendered in the video similar to the prompt's description? | 2.33 | 2.00\nSetup -> Scene -> Set Design -> Backdrop | Does the video feature a coherent backdrop that includes a muted cobalt sky, effectively complementing the snowy landscape as described in the prompt? | 3.33 | 1.00"
+  },
+  {
+    "id": "36",
+    "videoA": "ltx_01047.mp4",
+    "videoB": "Minimax_01047.mp4",
+    "modelA": "LTX",
+    "modelB": "Minimax",
+    "prompt": "On a moss-covered balcony of a forgotten castle with crumbling stone arches, an adventurer in a worn leather jerkin and travel-stained cloak studies a magical map of ancient parchment - its faded vellum surface projecting swirling visions in ethereal blues and golds. His loyal gryphon rests watchfully behind him, its weather-beaten saddle blending with the emerald moss as cracked pillars frame the scene with vertical lines of decay.",
+    "meta": "Category | Question | Minimax | LTX\nSetup -> Scene -> Set Design -> Backdrop -> Location | Does the generated video visually represent a forgotten castle with decayed architectural features that clearly define the location setting? | 4.00 | 2.33\nSetup -> Scene -> Set Design -> Backdrop -> Setting | Is the outdoor setting, specifically the balcony of a castle, effectively depicted in the generated video? | 4.00 | 2.00\nSetup -> Subjects -> Class | Are both the adventurer and the gryphon clearly visible and accurately portrayed as the primary subjects in the generated video? | 3.67 | 2.33\nSetup -> Scene -> Set Design -> Props | Does the generated video prominently feature a magical map with detailed attributes such as a faded vellum surface and ethereal swirling visions, as described in the prompt? | 4.33 | 2.00\nSetup -> Scene -> Geometry -> Frame -> Lines | Are the vertical lines, produced by cracked pillars and decaying structures, effectively used to frame the overall scene in the generated video? | 4.00 | 2.00\nSetup -> Scene -> Texture | Are the textured details\u2014like the moss-covered surfaces, worn fabrics of the adventurer\u2019s attire, and weathered stone elements\u2014visually and convincingly rendered in the generated video? | 3.67 | 2.00"
+  },
+  {
+    "id": "38",
+    "videoA": "wan1b_00053.mp4",
+    "videoB": "ltx_00053.mp4",
+    "modelA": "Wan 1B",
+    "modelB": "LTX",
+    "prompt": "On a theater stage during rehearsal, an actor begins delivering a dramatic monologue in a Medium shot with a Low angle, lit by stark Back Light that carves their silhouette against the encroaching darkness. As the monologue intensifies, a Rack focus shifts attention to the descending scenery bathed in Hard shadows from Direct Light above, heightening the collision of performance and impending disaster.",
+    "meta": "Category | Question | Wan 1B | LTX\nCamera -> Creative Intent -> Shot Size | Does the generated video clearly display a medium shot framing that captures the subject and surroundings as described? | 2.67 | 1.33\nCamera -> Extrinsics -> Angle | Is the low angle perspective clearly present in the video, enhancing the visual impact as specified in the prompt? | 3.33 | 1.00\nCamera -> Intrinsics -> Depth of Field | Does the video effectively utilize a rack focus effect to manage the depth of field, creating the intended shift in focus as described? | 2.33 | 1.33\nLighting -> Lighting Position | Is the back light clearly visible in the scene, effectively illuminating the subject's silhouette as described? | 4.33 | 1.67\nLighting -> Effects -> Shadows -> Hard | Are the hard shadows produced by the direct light clearly defined and consistent with the dramatic effect described in the prompt? | 4.00 | 2.33"
+  },
+  {
+    "id": "39",
+    "videoA": "wan1b_00119.mp4",
+    "videoB": "Minimax_00119.mp4",
+    "modelA": "Wan 1B",
+    "modelB": "Minimax",
+    "prompt": "Close up on trembling, sweat-beaded hands illuminated by the cold glow of a digital timer\u2014its harsh red numerals casting jagged shadows across a labyrinth of metallic wires. The camera maintains a shallow depth of field with a medium lens, blurring the cluttered chaos of tools and manuals in the background while keeping the ticking countdown and quivering fingers in razor focus. A single LED side light throws hard shadows that stretch like accusatory arrows across the bomb casing, heightening the unbearable tension as the text \"Choose Wisely\" flares briefly in blood-red typography before vanishing into the humming darkness.",
+    "meta": "Category | Question | Minimax | Wan 1B\nEvents -> Types -> Actions -> Interaction Types -> Standalone | Does the video clearly depict the trembling, sweat-beaded hands as a distinct, standalone action that visually conveys urgency or fear? | 1.67 | 4.00\nEvents -> Types -> Actions -> Portrayed as -> Temporal -> Sequential | Is the ticking countdown visibly progressing in a sequential, time-based manner that is easy to follow throughout the video? | 1.33 | 2.00\nEvents -> Types -> Actions -> Portrayed as -> Temporal -> Sequential | Does the video effectively depict the flaring and subsequent vanishing of the 'Choose Wisely' text as a clear, sequential event that adds to the narrative pace? | 1.33 | 2.33\nEvents -> Types -> Emotions -> Expression Types -> Explicit | Does the video visually and contextually convey the explicit, escalating tension as described, reinforcing the emotional impact of the scene? | 1.33 | 3.67\nCamera -> Creative Intent -> Shot Size | Does the generated video clearly present a close-up shot that focuses on detailed, intimate visuals? | 2.67 | 4.00\nCamera -> Intrinsics -> Depth of Field | Is the shallow depth of field effect visibly and consistently applied in the generated video to isolate the subject? | 1.67 | 4.33\nCamera -> Intrinsics -> Lens Size | Does the video use a medium lens perspective that supports the intended composition and field of view? | 1.67 | 3.33\nLighting -> Sources -> Artificial/Practicals Light | Is the LED light source clearly visible and does it effectively illuminate the scene as described? | 1.33 | 3.67\nLighting -> Lighting Position | Is the side light's positioning evident and does it contribute to creating dynamic lighting effects in the scene? | 2.00 | 3.67\nLighting -> Effects -> Shadows -> Hard | Are the hard shadows clearly defined and do they match the direct lighting effect described in the prompt? | 2.33 | 3.33\nLighting -> Color Temperature | Does the scene effectively exhibit a cool or cold color temperature as indicated by the 'cold glow' in the prompt? | 1.33 | 3.67\nSetup -> Subjects -> Class | Does the video clearly depict trembling, sweat-beaded hands as a prominent on-screen subject in a focused close-up? | 1.67 | 4.00\nSetup -> Scene -> Set Design -> Props | Are the props\u2014like the digital timer, bomb casing, metallic wires, and background tools/manuals\u2014clearly depicted in the scene with details that match the prompt's description? | 1.33 | 3.67\nSetup -> Text Generation | Is the on-screen text 'Choose Wisely' generated clearly and integrated into the scene with the proper visual impact as described in the prompt? | 1.33 | 2.33"
+  },
+  {
+    "id": "40",
+    "videoA": "Minimax_00625.mp4",
+    "videoB": "hunyuan_00625.mp4",
+    "modelA": "Minimax",
+    "modelB": "Hunyuan",
+    "prompt": "On a city street illuminated by golden hour sunlight casting elongated shadows, a window washer methodically wipes a shop's panes in circular motions captured through a tracking camera movement on stabilizer. The medium lens maintains shallow depth of field at wide aperture, rendering the bustling sidewalk crowd as velvety bokeh while keeping focus razor-sharp on the squeegee's repetitive arcs. Cool ambient light reflects in the wet glass panes, creating liquid highlights that bloom with each rotation of the washer's tool, while a backlight position emphasizes the worker's silhouette against the translucent surface. Medium ISO preserves detail in both the sun-warmed brick facade and the chiaroscuro patterns of the window frames.",
+    "meta": "Category | Question | Hunyuan | Minimax\nCamera -> Trajectory -> Camera Movement -> 3D | Does the video clearly demonstrate a dynamic tracking camera movement that captures spatial depth as described? | 1.33 | 3.67\nCamera -> Trajectory -> Gear | Is the use of a stabilizer apparent in the video to ensure smooth camera movement as specified in the prompt? | 1.33 | 4.00\nCamera -> Intrinsics -> Lens Size | Does the video visually reflect the characteristics associated with a medium lens? | 3.00 | 3.00\nCamera -> Intrinsics -> Depth of Field | Is the shallow depth of field effect evident in the video, isolating the subject effectively? | 2.00 | 4.33\nCamera -> Intrinsics -> Exposure -> Aperture | Does the video demonstrate the wide aperture effect in its lighting and depth of field as described? | 2.00 | 3.67\nCamera -> Intrinsics -> Exposure -> ISO | Does the video ensure the detail preservation and clarity that are typical of a medium ISO setting? | 2.00 | 3.00\nLighting -> Sources -> Natural Light | Does the video clearly depict natural light sources such as golden hour sunlight and ambient light as described? | 3.00 | 4.33\nLighting -> Conditions | Is the golden hour lighting condition visually evident in the scene with warm, directional light? | 2.33 | 4.33\nLighting -> Effects -> Shadows | Are the elongated shadows rendered accurately and in line with the golden hour lighting described? | 2.00 | 4.67\nLighting -> Effects -> Reflection | Does the video effectively capture the reflective quality of light on wet surfaces as described? | 3.00 | 3.67\nLighting -> Lighting Position | Is the backlighting effect clearly visible, enhancing the silhouette as specified in the prompt? | 1.67 | 4.67"
+  },
+  {
+    "id": "41",
+    "videoA": "Minimax_01004.mp4",
+    "videoB": "ltx_01004.mp4",
+    "modelA": "Minimax",
+    "modelB": "LTX",
+    "prompt": "At a bustling outdoor market framed by trailing diagonal steam lines from sizzling griddles, a street vendor in a goofy apron patterned with geometric grids flips a golden-yellow pancake amidst swirling woodfire smoke and airborne flour dust. A cheeky parrot with high-contrast plumage of electric blue against crimson tail feathers perches on the weathered oak counter, mirroring the cook's broad gestures as earthy brown clay pots clatter in the background, sparking light-hearted laughter through the warm ochre-toned chaos.",
+    "meta": "Category | Question | Minimax | LTX\nSetup -> Scene -> Set Design -> Backdrop -> Setting | Is the scene unmistakably set in an outdoor market environment that conveys an exterior setting? | 3.67 | 1.67\nSetup -> Scene -> Geometry -> Frame -> Lines | Are the diagonal steam lines visually prominent and do they guide the viewer\u2019s attention within the scene? | 3.33 | 1.33\nSetup -> Subjects -> Class | Are both the street vendor and the parrot depicted as distinct, well-defined subjects in the scene? | 4.33 | 2.33\nSetup -> Subjects -> Costume | Is the vendor's quirky, patterned apron clearly visible and detailed as part of their costume in the generated video? | 4.33 | 2.67\nSetup -> Scene -> Set Design -> Props -> Class | Are the props like the pancake and clay pots distinctly rendered and integrated within the scene\u2019s overall composition? | 3.67 | 2.00\nSetup -> Scene -> Set Design -> Environment -> Elements | Are environmental elements like smoke and flour dust effectively incorporated and visually consistent with the scene's atmosphere? | 4.00 | 2.33\nSetup -> Scene -> Set Design -> Props -> Material | Are the material qualities, such as the weathered wood of the counter and the earthy texture of the clay pots, clearly represented in the video? | 4.33 | 3.00"
+  },
+  {
+    "id": "42",
+    "videoA": "Minimax_00638.mp4",
+    "videoB": "ltx_00638.mp4",
+    "modelA": "Minimax",
+    "modelB": "LTX",
+    "prompt": "A musician in a tailored waistcoat plucks notes from the air under the amber glow of a piano lamp, fingers lingering on polished ivory keys as the melody dissolves. Shallow depth of field isolates their hands against a Steinway grand piano's rich mahogany curves, the camera's gradual push-in magnifying vanishing vibrations in dust-moted air. Warm light casts elongated shadows across sheet music, each fading chord echoed through soft-focus velvet curtains framing the deep studio space.",
+    "meta": "Category | Question | Minimax | LTX\nEvents -> Types -> Actions | Does the video clearly depict the musician actively plucking notes in a visually compelling manner as described? | 3.67 | 1.33\nEvents -> Types -> Actions | Does the video effectively capture the subtle, lingering movement of the musician's fingers on the keys? | 3.67 | 1.00\nCamera -> Intrinsics -> Depth of Field | Does the generated video clearly exhibit a shallow depth of field effect as described in the prompt? | 3.00 | 1.33\nCamera -> Trajectory -> Camera Movement -> 3D | Does the generated video effectively portray a push-in camera movement that enhances the scene's depth? | 1.67 | 1.00\nLighting -> Sources -> Artificial/Practicals Light | Is the artificial light source, as exemplified by the piano lamp, visibly present and does it clearly illuminate the scene? | 3.33 | 1.33\nLighting -> Color Temperature | Does the scene exhibit a warm color temperature that reinforces the described atmosphere through consistent warm and amber hues? | 3.67 | 2.67\nLighting -> Effects -> Shadows | Are the elongated shadows, as generated by the warm lighting, clearly rendered and do they contribute effectively to the scene\u2019s visual composition? | 3.00 | 1.67\nSetup -> Subjects -> Class | Is the musician rendered with sufficient detail and presence that matches the prompt\u2019s description? | 3.33 | 2.00\nSetup -> Subjects -> Costume | Does the generated video clearly depict the subject wearing a tailored waistcoat that reflects the described stylish appearance? | 3.67 | 1.67\nSetup -> Scene -> Set Design -> Props | Are the key props like the Steinway grand piano, piano lamp, sheet music, and velvet curtains accurately represented and integrated into the video scene as described? | 3.33 | 1.33\nSetup -> Scene -> Set Design -> Environment | Does the video effectively convey a deep studio environment that matches the detailed spatial description provided in the prompt? | 3.33 | 2.00\nSetup -> Scene -> Set Design -> Props -> Material | Are the material qualities\u2014like the polished finish of the ivory keys and the rich mahogany of the piano\u2014visually and texturally represented in the video as described? | 3.67 | 1.67"
+  },
+  {
+    "id": "43",
+    "videoA": "easyanimate5.1_00783.mp4",
+    "videoB": "wan14b_00783.mp4",
+    "modelA": "Easy Animate 5.1",
+    "modelB": "Wan 14B",
+    "prompt": "A medium-full two shot of two young lovers standing under falling cherry blossom petals, captured with a soft depth of field using a wide aperture to blur the pink cascade into watercolor textures. The camera begins at a ground-level angle, slowly tilting up with a stabilized dolly movement that drifts closer to their intertwined hands, maintaining a low ISO for crisp daylight clarity as they gaze into each other's eyes with petals catching in their hair like fleeting moments suspended in time.",
+    "meta": "Category | Question | Easy Animate 5.1 | Wan 14B\nCamera -> Creative Intent -> Shot Size | Does the video exhibit a medium-full shot size that appropriately frames the subjects within the scene? | 1.67 | 4.33\nCamera -> Creative Intent -> Framing | Is the two-shot framing clearly visible, effectively positioning two subjects within the frame? | 3.00 | 3.67\nCamera -> Intrinsics -> Depth of Field | Does the generated video demonstrate a soft depth of field effect where the background blurs gently while keeping the subject in focus? | 1.33 | 2.67\nCamera -> Intrinsics -> Exposure -> Aperture | Is the wide aperture effect apparent in the video, contributing to a shallow depth of field with noticeable bokeh? | 2.00 | 3.00\nCamera -> Extrinsics -> Angle | Does the video clearly present a ground-level camera angle that provides an upward perspective on the scene? | 1.67 | 4.33\nCamera -> Trajectory -> Camera Movement -> 2D | Is there a distinct tilt-up camera movement in the video that shifts the perspective vertically as described? | 1.67 | 4.33\nCamera -> Trajectory -> Gear | Does the video incorporate a smooth and stabilized dolly movement that effectively transitions the camera's position as described? | 3.67 | 4.33\nCamera -> Intrinsics -> Exposure -> ISO | Is the low ISO setting clearly evident in the video, contributing to crisp clarity under daylight conditions? | 2.00 | 4.33"
+  },
+  {
+    "id": "44",
+    "videoA": "hunyuan_00948.mp4",
+    "videoB": "Minimax_00948.mp4",
+    "modelA": "Hunyuan",
+    "modelB": "Minimax",
+    "prompt": "Within a cramped basement with low ceilings and sagging wooden beams, a terrified man in a threadbare flannel shirt crouches near a rust-pitted iron trapdoor, his disheveled hair catching drifting dust motes. Flaking stone walls bear water stains and a grotesque mural of a demonic figure in cracked crimson and ochre\u2014its twisted limbs and peeling eyes set against crumbling plaster where brickwork erupts like broken teeth. The space reeks of damp earth and oxidized metal, with every surface marred by decades of grime: splintered floorboards, corroded pipework in shadow, and a solitary dust-caked lightbulb swinging on frayed wiring that casts trembling highlights across the scarred trapdoor and the man's grime-streaked face.",
+    "meta": "Category | Question | Hunyuan | Minimax\nSetup -> Scene -> Set Design -> Backdrop -> Setting | Does the generated video clearly depict an interior basement setting with cramped space, low ceilings, and deteriorating architectural features? | 2.33 | 4.33\nSetup -> Scene -> Set Design -> Environment | Does the video effectively portray a dilapidated environment with textured details like sagging beams, water-stained walls, and pervasive grime as described in the prompt? | 2.67 | 4.33\nSetup -> Scene -> Set Design -> Props -> Description | Are there prominently featured props, such as a rusted iron trapdoor and a weathered lightbulb with frayed wiring, that mirror the detailed descriptions provided in the prompt? | 1.00 | 3.67\nSetup -> Subjects -> Class | Is there a clearly depicted subject\u2014a man with a threadbare flannel shirt, disheveled hair, and a grimy appearance\u2014present in the video as detailed in the prompt? | 3.33 | 4.00"
+  },
+  {
+    "id": "45",
+    "videoA": "ltx_01051.mp4",
+    "videoB": "Minimax_01051.mp4",
+    "modelA": "LTX",
+    "modelB": "Minimax",
+    "prompt": "Within a sun-dappled garden at golden hour, warm amber light filters through trembling maple leaves onto a moss-carpeted stone table where a weathered botanical journal lies open. A determined botanist in a linen waistcoat cradles a translucent orchid with surgeon-like precision, her eyes flicking between the fragile bloom and the foxed pages. The shallow depth of field softens the verdant background while her furrowed brow and the orchid\u2019s trembling petals remain crisply detailed. A soft breeze stirs strands of chestnut hair escaping her braided updo as she adjusts her wire-rimmed glasses, catching glints of light. The scene converges on her hands\u2014one supporting the orchid\u2019s delicate stem, the other anchoring the journal\u2019s crumbling edge\u2014framed by the stone table\u2019s rough-hewn texture and the layered, emerald foliage of the garden.",
+    "meta": "Category | Question | Minimax | LTX\nEvents -> Types -> Actions | Is the action of cradling the translucent orchid clearly and dynamically depicted in the video? | 3.67 | 2.00\nEvents -> Types -> Actions | Is the action of supporting the orchid\u2019s delicate stem visually clear and appropriately timed in the video? | 3.67 | 1.33\nEvents -> Types -> Change in Environment | Is the environmental change, reflected by a soft breeze stirring strands of chestnut hair, effectively and naturally represented in the video? | 3.67 | 2.00\nCamera -> Intrinsics -> Depth of Field | Does the generated video clearly exhibit a shallow depth of field effect with a sharply focused subject and a softly blurred background as described in the prompt? | 3.67 | 1.67\nLighting -> Sources -> Natural Light | Does the video clearly depict natural sunlight as the primary lighting source, as indicated by the sun-dappled effect? | 4.00 | 2.33\nLighting -> Conditions | Is the golden hour lighting condition consistently and effectively portrayed in the video? | 4.00 | 2.67\nLighting -> Color Temperature | Does the video maintain a warm color temperature that reflects the 'warm amber light' described in the prompt? | 4.00 | 2.00\nSetup -> Scene -> Set Design -> Backdrop -> Setting | Does the video clearly depict an outdoor garden setting with natural elements, as described by the 'sun-dappled garden' in the prompt? | 4.33 | 2.33\nSetup -> Scene -> Set Design -> Backdrop -> Time of Day | Does the video demonstrate the warm, atmospheric lighting of the golden hour, aligning with the prompt's description? | 4.00 | 2.00\nSetup -> Scene -> Set Design -> Props | Are the key props (the stone table, botanical journal, and orchid) accurately and richly depicted with their described textures and details in the video? | 4.00 | 2.33\nSetup -> Subjects -> Class | Is the botanist presented as the clear central subject in the video, with visual details (attire and characteristic features) that match the prompt? | 3.67 | 1.67\nSetup -> Scene -> Set Design -> Environment -> Background | Does the video include a lush, layered background with emerald foliage that effectively reinforces the garden atmosphere as described? | 3.67 | 2.00"
+  },
+  {
+    "id": "47",
+    "videoA": "ltx_00118.mp4",
+    "videoB": "wan1b_00118.mp4",
+    "modelA": "LTX",
+    "modelB": "Wan 1B",
+    "prompt": "Wide shot of a massive fantasy battlefield where diagonal plumes of smoke from burning siege engines cut through the composition, their ashen trails forming dynamic lines that draw the eye toward clashing armies of crimson-and-silver armored knights beneath a cold steel sky. Scattered fires blaze among fallen banners embroidered with shattered sigils, their embers mixing with ash that rains like morbid snowflakes. The text \"The Final Stand\" materializes in the brooding cumulus formations above, its letters disintegrating as the battle recedes into mist-shrouded hills littered with broken spears and phantom shapes still locked in eternal combat.",
+    "meta": "Category | Question | Wan 1B | LTX\nSetup -> Scene | Does the generated video clearly depict the massive fantasy battlefield with its cold steel sky and mist-shrouded hills in a cohesive and detailed manner? | 4.33 | 2.67\nSetup -> Scene -> Geometry -> Frame -> Lines | Does the generated video include prominent diagonal lines, such as the diagonal smoke trails, that effectively guide the viewer's eye across the scene? | 4.33 | 3.00\nSetup -> Scene -> Set Design -> Environment -> Elements | Does the generated video effectively represent environmental elements like smoke, fire, and ash that contribute to the dramatic atmosphere of the battlefield? | 4.33 | 3.00\nSetup -> Text Generation | Does the generated video display the dynamic text 'The Final Stand' in a manner that integrates seamlessly with the overall scene, including the described disintegration effect within the cloud formations? | 3.33 | 1.33\nSetup -> Subjects -> Class | Does the generated video clearly depict the subjects, such as the clashing armies of armored knights and phantom figures engaged in combat, as described in the scene? | 4.00 | 1.67\nSetup -> Scene -> Set Design -> Props | Does the generated video accurately render the detailed props, such as burning siege engines, fallen banners with shattered sigils, and broken spears, that enrich the battlefield environment? | 4.33 | 2.67"
+  },
+  {
+    "id": "48",
+    "videoA": "ltx_00855.mp4",
+    "videoB": "wan1b_00855.mp4",
+    "modelA": "LTX",
+    "modelB": "Wan 1B",
+    "prompt": "Amid the ruins of a forgotten civilization - weathered sandstone columns casting diagonal shadows through high contrast sunlight - small metallic beetles methodically sift and collect debris into neat piles of sorted archaeological fragments. The solemn mood permeates the deep spatial arrangement of collapsed architecture, their polished bronze carapaces glinting against crumbling stone textures as they perform their eternal curation.",
+    "meta": "Category | Question | Wan 1B | LTX\nSetup -> Scene -> Texture -> Contrast | Does the video clearly depict high contrast between bright sunlight and deep shadows across the scene? | 4.00 | 1.67\nSetup -> Scene -> Geometry -> Frame -> Lines | Are prominent diagonal shadows present in the video that guide the viewer\u2019s eye across the frame? | 2.33 | 2.00\nSetup -> Scene -> Geometry -> Space -> Depth | Does the video exhibit a deep spatial arrangement with clear separation between the foreground, midground, and background elements? | 2.67 | 2.00\nSetup -> Subjects -> Class | Are the metallic beetles clearly presented as intentional subjects in the video, with distinctive visual features? | 4.33 | 1.67\nSetup -> Scene -> Set Design -> Backdrop | Does the video effectively portray an ancient, crumbling backdrop featuring ruins, weathered sandstone columns, and collapsed architecture? | 3.67 | 1.33\nSetup -> Scene -> Set Design -> Props | Are the archaeological fragments and accumulated debris clearly integrated as props that enhance the setting in the video? | 2.67 | 1.33"
+  },
+  {
+    "id": "50",
+    "videoA": "Minimax_01060.mp4",
+    "videoB": "ltx_01060.mp4",
+    "modelA": "Minimax",
+    "modelB": "LTX",
+    "prompt": "In a cozy art studio with exposed brick walls weathered by time, a young man draws passionately at his oak easel, the canvas bathed in warm light filtering through a streaked window at dusk. An antique mahogany piano with faded floral carvings sits quietly in the corner, its polished surface catching diagonal streaks of amber sunlight that echo the burnt sienna and ochre tones smeared across the artist's palette. The triangular composition between easel, piano, and a draped armchair creates quiet balance, each object's textured patina\u2014from the paint-spattered dropcloth to the piano's chipped ivory keys\u2014whispering stories of shared creative history.",
+    "meta": "Category | Question | Minimax | LTX\nSetup -> Scene -> Set Design -> Backdrop -> Setting | Does the generated video clearly depict an indoor art studio with exposed brick walls and a cozy, established backdrop? | 5.00 | 3.33\nSetup -> Scene -> Set Design -> Backdrop -> Time of Day | Is the time of day clearly rendered as dusk, with appropriate lighting and ambient cues in the video? | 3.67 | 3.00\nSetup -> Subjects -> Class | Is the young man, depicted as an artist, clearly featured as the central subject in the art studio environment? | 4.67 | 1.00\nSetup -> Scene -> Set Design -> Props -> Class | Are the props (easel, piano, canvas, armchair, dropcloth, and keys) accurately depicted with clear materials and textures as described in the prompt? | 4.00 | 1.67\nSetup -> Scene -> Geometry -> Frame -> Shapes -> Regular | Does the video exhibit a clearly defined triangular composition among key objects to create a balanced and intentional spatial layout? | 3.67 | 2.00\nSetup -> Scene -> Geometry -> Frame -> Lines | Are the diagonal lines, such as the streaks of light filtering through the window, effectively integrated into the scene's geometric composition? | 3.33 | 1.67\nSetup -> Scene -> Texture -> Color Palette | Is the color palette featuring burnt sienna, ochre, and amber tones consistently applied across the scene to enhance the artistic atmosphere? | 4.00 | 3.67"
+  },
+  {
+    "id": "51",
+    "videoA": "pyramidflow_00453.mp4",
+    "videoB": "wan1b_00453.mp4",
+    "modelA": "Pyramid Flow",
+    "modelB": "Wan 1B",
+    "prompt": "On a sunny, flower-filled meadow, a group of cheerful, fluffy caterpillars, led by their brave leader, chomp, embark on a thrilling journey across a giant leaf bridge, their tiny legs marching in unison.",
+    "meta": "Category | Question | Pyramid Flow | Wan 1B\nEvents -> Types -> Actions | Does the video clearly depict the caterpillars initiating their journey across the giant leaf bridge as described? | 1.00 | 5.00\nEvents -> Types -> Actions -> Interaction Types -> Interactive | Is the synchronized and coordinated movement of the caterpillars visually and effectively represented in the video? | 1.33 | 4.67"
+  },
+  {
+    "id": "52",
+    "videoA": "mochi_00864.mp4",
+    "videoB": "Ray2_00864.mp4",
+    "modelA": "Mochi",
+    "modelB": "Luma Ray 2",
+    "prompt": "An old-fashioned steam locomotive rushes along tracks through a whimsical countryside, blowing steam.",
+    "meta": "Category | Question | Luma Ray 2 | Mochi\nEvents -> Types -> Actions -> Interaction Types -> Standalone | Is the locomotive's rapid motion visually depicted as a clear, stand-alone action, moving fast along the tracks without interacting with other elements? | 4.33 | 1.33\nEvents -> Types -> Actions | Is the action of blowing steam clearly shown as a distinct and noticeable effect emerging from the locomotive? | 4.67 | 1.00"
+  },
+  {
+    "id": "54",
+    "videoA": "wan14b_00317.mp4",
+    "videoB": "pyramidflow_00317.mp4",
+    "modelA": "Wan 14B",
+    "modelB": "Pyramid Flow",
+    "prompt": "Close-up on a weathered hand meticulously sketching a detailed portrait, the pencil moving with precision and passion over the textured paper.",
+    "meta": "Category | Question | Wan 14B | Pyramid Flow\nEvents -> Types -> Actions | Does the video clearly show the physical action of sketching a detailed portrait with deliberate pencil movements? | 4.67 | 1.33"
+  },
+  {
+    "id": "59",
+    "videoA": "hunyuan_00052.mp4",
+    "videoB": "wan14b_00052.mp4",
+    "modelA": "Hunyuan",
+    "modelB": "Wan 14B",
+    "prompt": "In a fantasy forest clearing, an archer starts nocking an arrow to their bowstring just as a mystical creature emerges from the dense foliage behind their target.",
+    "meta": "Category | Question | Hunyuan | Wan 14B\nEvents -> Types -> Actions | Does the video clearly depict the archer engaged in the action of nocking an arrow? | 1.67 | 4.67\nEvents -> Types -> Actions -> Portrayed as -> Temporal -> Overlapping | Is the emergence of the mystical creature shown as occurring simultaneously with the archer's action of nocking an arrow? | 1.33 | 4.67"
+  },
+  {
+    "id": "64",
+    "videoA": "vchitect_00583.mp4",
+    "videoB": "wan14b_00583.mp4",
+    "modelA": "Vchitect 2.0",
+    "modelB": "Wan 14B",
+    "prompt": "A young woman hurriedly packs her suitcase, pausing briefly to ponder over a photograph before placing it carefully inside.",
+    "meta": "Category | Question | Vchitect 2.0 | Wan 14B\nEvents -> Types -> Actions | Does the video clearly depict a character performing a sequence of deliberate physical actions such as hurriedly packing a suitcase, pausing to observe a photograph, and then placing it inside? | 1.00 | 4.33\nEvents -> Types -> Actions -> Portrayed as -> Temporal | Is the sequence of actions (packing, pausing, and placing) presented in a clear, chronological order that reflects the intended temporal progression of events? | 1.00 | 3.67"
+  },
+  {
+    "id": "70",
+    "videoA": "hunyuan_00323.mp4",
+    "videoB": "wan14b_00323.mp4",
+    "modelA": "Hunyuan",
+    "modelB": "Wan 14B",
+    "prompt": "On a rainy night in new york, a couple is walking by, holding each other close, as they navigate through an alley on their way home.",
+    "meta": "Category | Question | Hunyuan | Wan 14B\nEvents -> Types -> Actions | Does the video clearly depict the couple walking and navigating through an alley as described in the prompt? | 1.67 | 5.00\nEvents -> Types -> Actions -> Interaction Types -> Interactive | Does the video effectively show the couple interacting by holding each other close during their walk? | 2.33 | 5.00"
+  },
+  {
+    "id": "76",
+    "videoA": "easyanimate5.1_00063.mp4",
+    "videoB": "ltx_00063.mp4",
+    "modelA": "Easy Animate 5.1",
+    "modelB": "LTX",
+    "prompt": "Looking up inside a humid room, the blades of a ceiling fan rotate at a constant, hypnotic speed.",
+    "meta": "Category | Question | Easy Animate 5.1 | LTX\nEvents -> Types -> Actions | Does the video clearly depict the physical action of the ceiling fan blades rotating continuously? | 4.33 | 1.67\nEvents -> Types -> Actions -> Portrayed as -> Temporal | Does the video effectively convey the cyclic and continuous temporal nature of the fan's rotation, as described by its constant and hypnotic speed? | 4.33 | 1.33"
+  },
+  {
+    "id": "86",
+    "videoA": "mochi_00891.mp4",
+    "videoB": "wan14b_00891.mp4",
+    "modelA": "Mochi",
+    "modelB": "Wan 14B",
+    "prompt": "A vintage convertible, parked beneath blooming cherry blossom trees, petals softly falling onto its polished hood.",
+    "meta": "Category | Question | Wan 14B | Mochi\nEvents -> Types -> Change in Environment | Are the falling petals depicted dynamically and naturally interacting with the convertible\u2019s surface as described in the prompt? | 1.33 | 4.00"
+  },
+  {
+    "id": "87",
+    "videoA": "ltx_01111.mp4",
+    "videoB": "wan1b_01111.mp4",
+    "modelA": "LTX",
+    "modelB": "Wan 1B",
+    "prompt": "Inside a modest study filled with books, a celebrated inventor and a young prot\u00e9g\u00e9 lean over sprawling blueprints, their faces animated with ideas and promise.",
+    "meta": "Category | Question | Wan 1B | LTX\nEvents -> Types -> Actions -> Interaction Types -> Interactive | Does the generated video clearly show the inventor and the prot\u00e9g\u00e9 engaging in interactive action while examining the blueprints? | 4.33 | 1.67\nEvents -> Types -> Emotions -> Expression Types -> Implicit | Does the generated video effectively portray the characters' animated facial expressions that subtly convey ideas and promise? | 4.00 | 1.33"
+  },
+  {
+    "id": "92",
+    "videoA": "wan14b_00467.mp4",
+    "videoB": "hunyuan_00467.mp4",
+    "modelA": "Wan 14B",
+    "modelB": "Hunyuan",
+    "prompt": "Amidst a cluttered office in the dimly lit background of a national tv interview, the interviewee speaks into the microphone, sharing anecdotes that reflect their remarkable achievements",
+    "meta": "Category | Question | Hunyuan | Wan 14B\nEvents -> Types -> Dialogues | Does the generated video clearly depict the interviewee engaging in dialogue by speaking into a microphone and effectively sharing their anecdotes? | 2.33 | 5.00"
+  },
+  {
+    "id": "94",
+    "videoA": "wan14b_00594.mp4",
+    "videoB": "hunyuan_00594.mp4",
+    "modelA": "Wan 14B",
+    "modelB": "Hunyuan",
+    "prompt": "By a park fountain, a skateboarder loses balance, knocking into a trash bin that topples over, scattering litter everywhere.",
+    "meta": "Category | Question | Hunyuan | Wan 14B\nEvents -> Types -> Actions -> Interaction Types -> Standalone | Does the video clearly depict the skateboarder losing balance as an isolated action? | 3.67 | 4.33\nEvents -> Types -> Actions -> Interaction Types -> Interactive | Does the video show a clear interaction where the skateboarder collides with the trash bin? | 1.33 | 5.00\nEvents -> Types -> Actions | Is the toppling of the trash bin visibly and accurately represented in the video after the collision? | 1.33 | 4.33 \nEvents -> Types -> Actions -> Portrayed as -> Temporal | Does the video effectively portray the scattering of litter as a direct result of the trash bin toppling over? | 1.33 | 4.67"
+  },
+  {
+    "id": "99",
+    "videoA": "wan1b_01079.mp4",
+    "videoB": "ltx_01079.mp4",
+    "modelA": "Wan 1B",
+    "modelB": "LTX",
+    "prompt": "At a community center, an elderly man and a spirited volunteer share a heartfelt conversation, their genuine smiles and subtle nods bridging generational divides.",
+    "meta": "Category | Question | Wan 1B | LTX\nEvents -> Types -> Dialogues | Does the video clearly depict a dialogue exchange that captures the depth and emotional tone of the heartfelt conversation? | 4.33 | 1.67\nEvents -> Types -> Emotions -> Expression Types -> Explicit | Does the video visibly present genuine, clear facial expressions such as heartfelt smiles that convey the intended emotion? | 4.67 | 2.33\nEvents -> Types -> Actions -> Interaction Types -> Interactive | Does the video effectively show subtle, interactive non-verbal gestures like nods that enhance the portrayal of the conversation? | 4.67 | 2.00"
+  },
+  {
+    "id": "100",
+    "videoA": "vchitect_00662.mp4",
+    "videoB": "wan1b_00662.mp4",
+    "modelA": "Vchitect 2.0",
+    "modelB": "Wan 1B",
+    "prompt": "An elderly woman in a cozy kitchen lovingly remarks: \"Nothing warms the soul like soup.\" Her grandson nods heartily, eating quickly.",
+    "meta": "Category | Question | Vchitect 2.0 | Wan 1B\nEvents -> Types -> Dialogues | Does the video clearly show the elderly woman delivering her remark 'Nothing warms the soul like soup' with visible emotional cues and proper dialogue pacing? | 2.33 | 3.33\nEvents -> Types -> Actions | Is the grandson's nodding action depicted clearly and responsively in the video, aligning with the intended emphasis of his gesture? | 1.00 | 4.00\nEvents -> Types -> Actions | Does the video effectively portray the grandson's quick eating action in a way that visually communicates urgency or responsiveness as suggested by the prompt? | 1.00 | 4.67"
+  }
+]

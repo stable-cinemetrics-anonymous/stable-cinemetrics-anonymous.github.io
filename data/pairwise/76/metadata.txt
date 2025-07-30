@@ -1,0 +1,3 @@
+Category | Question | easyanimate_5.1 | ltx_video
+Events -> Types -> Actions | Does the video clearly depict the physical action of the ceiling fan blades rotating continuously? | 4.33 | 1.67
+Events -> Types -> Actions -> Portrayed as -> Temporal | Does the video effectively convey the cyclic and continuous temporal nature of the fan's rotation, as described by its constant and hypnotic speed? | 4.33 | 1.33

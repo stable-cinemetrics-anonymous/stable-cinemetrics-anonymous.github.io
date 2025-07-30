@@ -1,0 +1,3 @@
+Category | Question | hunyuan | wan_14b
+Events -> Types -> Actions | Does the video clearly depict the archer engaged in the action of nocking an arrow? | 1.67 | 4.67
+Events -> Types -> Actions -> Portrayed as -> Temporal -> Overlapping | Is the emergence of the mystical creature shown as occurring simultaneously with the archer's action of nocking an arrow? | 1.33 | 4.67

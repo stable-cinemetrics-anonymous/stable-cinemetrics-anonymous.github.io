@@ -1,0 +1,2 @@
+Category | Question | hunyuan | wan_14b
+Events -> Types -> Dialogues | Does the generated video clearly depict the interviewee engaging in dialogue by speaking into a microphone and effectively sharing their anecdotes? | 2.33 | 5.00

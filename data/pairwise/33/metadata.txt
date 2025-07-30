@@ -1,0 +1,5 @@
+Category | Question | wan_1b | ltx_video
+Setup -> Scene -> Texture -> Contrast | Does the video display pronounced high-contrast texture details—for example, distinct light and dark areas on the snow surface—as described in the prompt? | 4.00 | 1.67
+Setup -> Scene -> Geometry -> Space -> Depth | Does the video effectively portray deep spatial layers that enhance the three-dimensional depth of the snowy landscape as described in the prompt? | 4.00 | 1.00
+Setup -> Scene -> Set Design -> Environment -> Elements | Is the snowy environment, including elements such as fresh, disturbed snow and the imprint of footprints, clearly rendered in the video similar to the prompt's description? | 2.33 | 2.00
+Setup -> Scene -> Set Design -> Backdrop | Does the video feature a coherent backdrop that includes a muted cobalt sky, effectively complementing the snowy landscape as described in the prompt? | 3.33 | 1.00

@@ -1,0 +1,2 @@
+Category | Question | wan_14b | mochi
+Events -> Types -> Change in Environment | Are the falling petals depicted dynamically and naturally interacting with the convertible’s surface as described in the prompt? | 1.33 | 4.00

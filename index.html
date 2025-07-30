@@ -15,10 +15,12 @@
   <nav class="hidden md:block fixed left-0 top-0 h-full w-48 border-r border-gray-200 bg-white/90 backdrop-blur p-4">
     <h2 class="font-semibold mb-4">Contents</h2>
     <ul class="space-y-2 text-sm">
-      <li><a href="#scine-scripts"  class="hover:underline">SCINE Scripts</a></li>
-      <li><a href="#scine-visuals"  class="hover:underline">SCINE Visuals</a></li>
-      <li><a href="#scine-reference" class="hover:underline">Motivating Examples</a></li>
-    </ul>
+  <li><a href="#scine-scripts"   class="hover:underline">SCINE Scripts</a></li>
+  <li><a href="#scine-visuals"   class="hover:underline">SCINE Visuals</a></li>
+  <li><a href="#pairwise"        class="hover:underline">Pairwise Model Comparisons</a></li>
+  <li><a href="#scine-reference" class="hover:underline">Motivating Examples</a></li>
+</ul>
+
   </nav>
 
   <!-- Main Content -->
@@ -51,6 +53,36 @@
       <div id="visuals-promptBox" class="max-w-5xl mx-auto text-base md:text-lg leading-relaxed text-center"></div>
     </section>
 
+    <!-- ═══════════ Pairwise Results ═══════════ -->
+  
+    <section id="pairwise" class="space-y-6">
+    <h2 class="text-3xl font-semibold text-center">Pairwise Results</h2>
+    <p id="desc-pairwise" class="max-w-3xl mx-auto text-center text-neutral-600"></p>
+
+    <!-- navigation -->
+    <div class="w-full max-w-6xl mx-auto flex justify-between items-center">
+      <button id="prevPair" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">⟵ Prev</button>
+      <button id="nextPair" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">Next ⟶</button>
+    </div>
+
+    <!-- viewer -->
+    <div id="pair-wrapper" class="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2"></div>
+
+    <!-- prompt -->
+    <p id="pair-prompt" class="max-w-5xl mx-auto text-base md:text-lg leading-relaxed text-center"></p>
+
+    <!-- collapsible metadata -->
+    <!-- collapsible metadata -->
+    <details id="pair-meta"
+            class="max-w-6xl mx-auto bg-gray-50 border border-gray-200 p-4 rounded">
+      <summary class="cursor-pointer font-medium select-none">
+        Show Metadata (Question, Categories and Scores)
+      </summary>
+      <!-- table will be injected here -->
+      <div class="mt-3 overflow-x-auto" id="pair-meta-body"></div>
+    </details>
+    </section>
+
     <!-- ════════════════ Cinematography Guide ════════════════ -->
     <section id="scine-reference" class="space-y-6">
       <h2 class="text-3xl font-semibold text-center">Motivating Examples</h2>
@@ -62,16 +94,21 @@
       <!-- Image grid -->
       <div id="cat-grid" class="w-full max-w-6xl mx-auto"></div>
     </section>
+
   </main>
 
   <script>
     /* ---------------- Section Descriptions ---------------- */
-    const sectionDescriptions={
-      scripts:'Qualitative results on SCINE Scripts across models.',
-      visuals:'Qualitative results on SCINE Visuals across models.'
-    };
-    document.getElementById('desc-scripts').textContent=sectionDescriptions.scripts;
-    document.getElementById('desc-visuals').textContent=sectionDescriptions.visuals;
+    const sectionDescriptions = {
+  scripts : 'Qualitative results on SCINE Scripts across models.',
+  visuals : 'Qualitative results on SCINE Visuals across models.',
+  pairwise: 'Side-by-Side Model Comparisons with per-category scores.'  
+};
+
+document.getElementById('desc-scripts' ).textContent = sectionDescriptions.scripts;
+document.getElementById('desc-visuals' ).textContent = sectionDescriptions.visuals;
+document.getElementById('desc-pairwise').textContent = sectionDescriptions.pairwise; 
+
 
     /* ---------------- Model Data ---------------- */
     const modelNames=['PyramidFlow','vchitect_2.0','cogvideo_5b','easyanimate_5.1','hunyuan','ltx_video','mochi','wan_1b','wan_14b','luma_ray_2','minimax','pika_2.2'];
@@ -152,64 +189,129 @@
     const grid=(mods,f,id,cols)=>`<div class="grid grid-cols-${cols} gap-0 hide-scrollbar">`+mods.map(m=>`<div class=\"relative group w-full h-40 md:h-48 overflow-hidden border border-gray-200\"><video src=\"${f}${m}_${id}.mp4\" muted loop playsinline class=\"object-cover w-full h-full\"></video><span class=\"absolute inset-x-0 bottom-0 bg-black/70 text-center text-xs p-1 text-white\">${modelDisplay[m]||m}</span></div>`).join('')+'</div>';
 
     /* -------------- Scripts rendering -------------- */
-    let idxS=0;const wrapS=document.getElementById('carousel-wrapper'),prS=document.getElementById('promptBox');
-    async function renderS(){wrapS.innerHTML='<span class="text-neutral-400">Loading videos…</span>';const p=scriptPages[idxS],f=`data/scine_scripts/${p.id}/`,mods=await getModels(p.id,f,9,cacheScripts);wrapS.innerHTML=grid(mods,f,p.id,3);prS.innerHTML=`${p.prompt} <span class="text-neutral-500">(${p.meta})</span>`;wrapS.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));}
-    document.getElementById('prevBtn').onclick=()=>{idxS=(idxS-1+scriptPages.length)%scriptPages.length;renderS();};
-    document.getElementById('nextBtn').onclick=()=>{idxS=(idxS+1)%scriptPages.length;renderS();};
-
-    /* -------------- Visuals rendering -------------- */
-    let idxV=0;const wrapV=document.getElementById('visuals-carousel-wrapper'),prV=document.getElementById('visuals-promptBox');
-    async function renderV(){wrapV.innerHTML='<span class="text-neutral-400">Loading videos…</span>';const p=visualPages[idxV],f=`data/scine_visuals/${p.id}/`,mods=await getModels(p.id,f,6,cacheVisuals);wrapV.innerHTML=grid(mods,f,p.id,3);prV.innerHTML=`${p.prompt} <span class="text-neutral-500">(${p.meta})</span>`;wrapV.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));}
-    document.getElementById('prevVisBtn').onclick=()=>{idxV=(idxV-1+visualPages.length)%visualPages.length;renderV();};
-    document.getElementById('nextVisBtn').onclick=()=>{idxV=(idxV+1)%visualPages.length;renderV();};
-
-    /* -------------- Cinematography reference rendering -------------- */
-    const catButtons=document.getElementById('cat-buttons');
-    const catGrid   =document.getElementById('cat-grid');
-    const catBase   ='data/categories/';
-
-    // Build the category buttons once
-    Object.keys(categories).forEach((cat,idx)=>{
-      const btn=document.createElement('button');
-      btn.textContent=categoryDisplay[cat]||cat.replace(/-/g,' ');
-      btn.dataset.cat=cat;
-      btn.className='px-3 py-1 text-sm rounded border border-gray-300 bg-gray-100 hover:bg-gray-200 transition';
-      btn.onclick=()=>renderCategory(cat);
-      catButtons.appendChild(btn);
-      if(idx===0) renderCategory(cat); // render first category by default
-    });
-
     
+/* -------------- Scripts rendering -------------- */
+let idxS=0;
+const wrapS=document.getElementById('carousel-wrapper'),
+      prS=document.getElementById('promptBox');
+async function renderS(){
+  wrapS.innerHTML='<span class="text-neutral-400">Loading videos…</span>';
+  const p=scriptPages[idxS],f=`data/scine_scripts/${p.id}/`,
+        mods=await getModels(p.id,f,9,cacheScripts);
+  wrapS.innerHTML=grid(mods,f,p.id,3);
+  prS.innerHTML=`${p.prompt} <span class="text-neutral-500">(${p.meta})</span>`;
+  wrapS.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
+}
+document.getElementById('prevBtn').onclick=()=>{idxS=(idxS-1+scriptPages.length)%scriptPages.length;renderS();};
+document.getElementById('nextBtn').onclick=()=>{idxS=(idxS+1)%scriptPages.length;renderS();};
 
-    function buildCatGrid(cat){
+/* -------------- Visuals rendering -------------- */
+let idxV=0;
+const wrapV=document.getElementById('visuals-carousel-wrapper'),
+      prV=document.getElementById('visuals-promptBox');
+async function renderV(){
+  wrapV.innerHTML='<span class="text-neutral-400">Loading videos…</span>';
+  const p=visualPages[idxV],f=`data/scine_visuals/${p.id}/`,
+        mods=await getModels(p.id,f,6,cacheVisuals);
+  wrapV.innerHTML=grid(mods,f,p.id,3);
+  prV.innerHTML=`${p.prompt} <span class="text-neutral-500">(${p.meta})</span>`;
+  wrapV.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
+}
+document.getElementById('prevVisBtn').onclick=()=>{idxV=(idxV-1+visualPages.length)%visualPages.length;renderV();};
+document.getElementById('nextVisBtn').onclick=()=>{idxV=(idxV+1)%visualPages.length;renderV();};
+
+/* -------------- Cinematography reference rendering -------------- */
+const catButtons=document.getElementById('cat-buttons'),
+      catGrid   =document.getElementById('cat-grid'),
+      catBase   ='data/categories/';
+
+Object.keys(categories).forEach((cat,idx)=>{
+  const btn=document.createElement('button');
+  btn.textContent=categoryDisplay[cat]||cat.replace(/-/g,' ');
+  btn.dataset.cat=cat;
+  btn.className='px-3 py-1 text-sm rounded border border-gray-300 bg-gray-100 hover:bg-gray-200 transition';
+  btn.onclick=()=>renderCategory(cat);
+  catButtons.appendChild(btn);
+  if(idx===0) renderCategory(cat); // render first by default
+});
+
+function buildCatGrid(cat){
   const files   = categories[cat] || [];
-  const hideCap = noLabelCats.includes(cat);   // hide captions?
-
-  return `<div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-2">` +
+  const hideCap = noLabelCats.includes(cat);
+  return `<div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-2">`+
     files.map(file=>{
-      const label = (imageLabels[cat] && imageLabels[cat][file]) 
-                    || file.replace(/\\.[^/.]+$/,'');
+      const label=(imageLabels[cat] && imageLabels[cat][file])||file.replace(/\.[^/.]+$/,'');
       return `
         <figure class="border border-gray-200">
-          <img src="${catBase}${cat}/${file}" alt="${label}" class="object-cover w-full h-32 md:h-40">
-          ${hideCap ? '' : `<figcaption class="text-xs text-center py-1">${label}</figcaption>`}
+          <img src="${catBase}${cat}/${file}" alt="${label}"
+               class="object-cover w-full h-32 md:h-40">
+          ${hideCap?'':`<figcaption class="text-xs text-center py-1">${label}</figcaption>`}
         </figure>`;
-    }).join('') +
+    }).join('')+
   '</div>';
 }
+function renderCategory(cat){
+  [...catButtons.children].forEach(btn=>{
+    const active=btn.dataset.cat===cat;
+    btn.classList.toggle('bg-gray-300',active);
+    btn.classList.toggle('text-gray-900',active);
+  });
+  catGrid.innerHTML=buildCatGrid(cat);
+}
 
-    function renderCategory(cat){
-      Array.from(catButtons.children).forEach(btn=>{
-        const active=btn.dataset.cat===cat;
-        btn.classList.toggle('bg-gray-300',active); // lighter highlight
-        btn.classList.toggle('text-gray-900',active);
-      });
-      catGrid.innerHTML=buildCatGrid(cat);
-    }
+/* =============== Pairwise loader =============== */
+let pairIdx=0, pairData=[];
 
-    /* -------------- Initial renders -------------- */
-    renderS();
-    renderV();
-  </script>
+fetch('data/pairwise/pairwise_manifest.json')
+  .then(r=>r.json())
+  .then(json=>{pairData=json; renderPair();})
+  .catch(err=>{
+    document.getElementById('pair-wrapper').innerHTML=
+      `<span class="text-red-500">Failed to load pairwise data: ${err}</span>`;
+  });
+
+document.getElementById('prevPair').onclick=()=>{pairIdx=(pairIdx-1+pairData.length)%pairData.length;renderPair();};
+document.getElementById('nextPair').onclick=()=>{pairIdx=(pairIdx+1)%pairData.length;renderPair();};
+/* ---- turn `meta` text into a <table> ---- */
+function metaToHTML(metaText){
+  const rows = metaText.trim().split('\n').map(r=>r.split('|').map(c=>c.trim()));
+  if(rows.length < 2) return '<p class="text-sm text-neutral-500">No metadata.</p>';
+
+  // header = rows[0]; body = rows.slice(1)
+  const th = rows[0].map(h=>`<th class="px-3 py-1 text-left font-semibold text-xs md:text-sm border-b">
+                               ${h}</th>`).join('');
+  const trs = rows.slice(1).map(r=>
+              `<tr>${r.map(c=>`<td class="px-3 py-1 align-top text-xs md:text-sm border-b">${c}</td>`).join('')}</tr>`
+            ).join('');
+
+  return `<table class="w-full text-left border-collapse">${th ? `<thead><tr>${th}</tr></thead>`:''}
+            <tbody>${trs}</tbody></table>`;
+}
+
+
+function renderPair(){
+  if(!pairData.length) return;
+  const p=pairData[pairIdx],
+        base=`data/pairwise/${p.id}/`,
+        vidTpl=(file,label)=>`
+          <div class="relative group w-full border border-gray-200 overflow-hidden">
+            <video src="${base}${file}" muted loop playsinline
+                   class="object-cover w-full h-64 md:h-80"></video>
+            <span class="absolute inset-x-0 bottom-0 bg-black/70 text-center text-xs p-1 text-white">
+              ${modelDisplay[label]||label}
+            </span>
+          </div>`;
+
+  document.getElementById('pair-wrapper').innerHTML=
+    vidTpl(p.videoA, p.modelA)+vidTpl(p.videoB, p.modelB);
+  document.getElementById('pair-prompt').textContent=p.prompt;
+  document.getElementById('pair-meta-body').innerHTML = metaToHTML(p.meta);
+  document.querySelectorAll('#pair-wrapper video').forEach(v=>v.play().catch(()=>{}));
+}
+
+/* -------------- Initial renders -------------- */
+renderS();
+renderV();
+</script>
 </body>
 </html>

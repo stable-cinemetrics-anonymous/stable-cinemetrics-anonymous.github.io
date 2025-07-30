@@ -1,0 +1,8 @@
+Category | Question | minimax | ltx_video
+Setup -> Scene -> Set Design -> Backdrop -> Setting | Does the generated video clearly depict an indoor art studio with exposed brick walls and a cozy, established backdrop? | 5.00 | 3.33
+Setup -> Scene -> Set Design -> Backdrop -> Time of Day | Is the time of day clearly rendered as dusk, with appropriate lighting and ambient cues in the video? | 3.67 | 3.00
+Setup -> Subjects -> Class | Is the young man, depicted as an artist, clearly featured as the central subject in the art studio environment? | 4.67 | 1.00
+Setup -> Scene -> Set Design -> Props -> Class | Are the props (easel, piano, canvas, armchair, dropcloth, and keys) accurately depicted with clear materials and textures as described in the prompt? | 4.00 | 1.67
+Setup -> Scene -> Geometry -> Frame -> Shapes -> Regular | Does the video exhibit a clearly defined triangular composition among key objects to create a balanced and intentional spatial layout? | 3.67 | 2.00
+Setup -> Scene -> Geometry -> Frame -> Lines | Are the diagonal lines, such as the streaks of light filtering through the window, effectively integrated into the scene's geometric composition? | 3.33 | 1.67
+Setup -> Scene -> Texture -> Color Palette | Is the color palette featuring burnt sienna, ochre, and amber tones consistently applied across the scene to enhance the artistic atmosphere? | 4.00 | 3.67

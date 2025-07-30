@@ -1,0 +1,15 @@
+Category | Question | minimax | wan_1b
+Events -> Types -> Actions -> Interaction Types -> Standalone | Does the video clearly depict the trembling, sweat-beaded hands as a distinct, standalone action that visually conveys urgency or fear? | 1.67 | 4.00
+Events -> Types -> Actions -> Portrayed as -> Temporal -> Sequential | Is the ticking countdown visibly progressing in a sequential, time-based manner that is easy to follow throughout the video? | 1.33 | 2.00
+Events -> Types -> Actions -> Portrayed as -> Temporal -> Sequential | Does the video effectively depict the flaring and subsequent vanishing of the 'Choose Wisely' text as a clear, sequential event that adds to the narrative pace? | 1.33 | 2.33
+Events -> Types -> Emotions -> Expression Types -> Explicit | Does the video visually and contextually convey the explicit, escalating tension as described, reinforcing the emotional impact of the scene? | 1.33 | 3.67
+Camera -> Creative Intent -> Shot Size | Does the generated video clearly present a close-up shot that focuses on detailed, intimate visuals? | 2.67 | 4.00
+Camera -> Intrinsics -> Depth of Field | Is the shallow depth of field effect visibly and consistently applied in the generated video to isolate the subject? | 1.67 | 4.33
+Camera -> Intrinsics -> Lens Size | Does the video use a medium lens perspective that supports the intended composition and field of view? | 1.67 | 3.33
+Lighting -> Sources -> Artificial/Practicals Light | Is the LED light source clearly visible and does it effectively illuminate the scene as described? | 1.33 | 3.67
+Lighting -> Lighting Position | Is the side light's positioning evident and does it contribute to creating dynamic lighting effects in the scene? | 2.00 | 3.67
+Lighting -> Effects -> Shadows -> Hard | Are the hard shadows clearly defined and do they match the direct lighting effect described in the prompt? | 2.33 | 3.33
+Lighting -> Color Temperature | Does the scene effectively exhibit a cool or cold color temperature as indicated by the 'cold glow' in the prompt? | 1.33 | 3.67
+Setup -> Subjects -> Class | Does the video clearly depict trembling, sweat-beaded hands as a prominent on-screen subject in a focused close-up? | 1.67 | 4.00
+Setup -> Scene -> Set Design -> Props | Are the props—like the digital timer, bomb casing, metallic wires, and background tools/manuals—clearly depicted in the scene with details that match the prompt's description? | 1.33 | 3.67
+Setup -> Text Generation | Is the on-screen text 'Choose Wisely' generated clearly and integrated into the scene with the proper visual impact as described in the prompt? | 1.33 | 2.33

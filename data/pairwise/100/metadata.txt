@@ -1,0 +1,4 @@
+Category | Question | vchitect_2.0 | wan_1b
+Events -> Types -> Dialogues | Does the video clearly show the elderly woman delivering her remark 'Nothing warms the soul like soup' with visible emotional cues and proper dialogue pacing? | 2.33 | 3.33
+Events -> Types -> Actions | Is the grandson's nodding action depicted clearly and responsively in the video, aligning with the intended emphasis of his gesture? | 1.00 | 4.00
+Events -> Types -> Actions | Does the video effectively portray the grandson's quick eating action in a way that visually communicates urgency or responsiveness as suggested by the prompt? | 1.00 | 4.67

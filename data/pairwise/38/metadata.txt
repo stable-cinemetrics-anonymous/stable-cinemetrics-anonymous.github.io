@@ -1,0 +1,6 @@
+Category | Question | wan_1b | ltx_video
+Camera -> Creative Intent -> Shot Size | Does the generated video clearly display a medium shot framing that captures the subject and surroundings as described? | 2.67 | 1.33
+Camera -> Extrinsics -> Angle | Is the low angle perspective clearly present in the video, enhancing the visual impact as specified in the prompt? | 3.33 | 1.00
+Camera -> Intrinsics -> Depth of Field | Does the video effectively utilize a rack focus effect to manage the depth of field, creating the intended shift in focus as described? | 2.33 | 1.33
+Lighting -> Lighting Position | Is the back light clearly visible in the scene, effectively illuminating the subject's silhouette as described? | 4.33 | 1.67
+Lighting -> Effects -> Shadows -> Hard | Are the hard shadows produced by the direct light clearly defined and consistent with the dramatic effect described in the prompt? | 4.00 | 2.33
