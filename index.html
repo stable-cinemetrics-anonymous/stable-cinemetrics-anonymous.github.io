@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stable Cinemetrics</title>
+  <title>Stable Cinemetrics</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .hide-scrollbar::-webkit-scrollbar{display:none}
@@ -15,28 +15,29 @@
   <nav class="hidden md:block fixed left-0 top-0 h-full w-48 border-r border-gray-200 bg-white/90 backdrop-blur p-4">
     <h2 class="font-semibold mb-4">Contents</h2>
     <ul class="space-y-2 text-sm">
-      <li><a href="#scine-scripts" class="hover:underline">SCINE Scripts</a></li>
-      <li><a href="#scine-visuals" class="hover:underline">SCINE Visuals</a></li>
+      <li><a href="#scine-scripts"  class="hover:underline">SCINE Scripts</a></li>
+      <li><a href="#scine-visuals"  class="hover:underline">SCINE Visuals</a></li>
+      <li><a href="#scine-reference" class="hover:underline">Motivating Examples</a></li>
     </ul>
   </nav>
 
   <!-- Main Content -->
   <main class="md:ml-52 p-4 md:p-6 space-y-20">
-    <!-- ──────────────── SCINE Scripts ──────────────── -->
+    <!-- ═══════════════════ SCINE Scripts ═══════════════════ -->
     <section id="scine-scripts" class="space-y-6">
       <h1 class="text-3xl md:text-4xl font-semibold text-center">SCINE Scripts</h1>
       <p id="desc-scripts" class="max-w-3xl mx-auto text-center text-neutral-600"></p>
 
       <div class="w-full max-w-6xl mx-auto flex justify-between items-center">
-        <button id="prevBtn"   class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">⟵ Prev</button>
-        <button id="nextBtn"   class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">Next ⟶</button>
+        <button id="prevBtn" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">⟵ Prev</button>
+        <button id="nextBtn" class="px-4 py-2 bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition text-sm md:text-base">Next ⟶</button>
       </div>
 
       <div id="carousel-wrapper" class="w-full max-w-6xl mx-auto min-h-[14rem] flex items-center justify-center"></div>
       <div id="promptBox" class="max-w-5xl mx-auto text-base md:text-lg leading-relaxed text-center"></div>
     </section>
 
-    <!-- ──────────────── SCINE Visuals ──────────────── -->
+    <!-- ═══════════════════ SCINE Visuals ═══════════════════ -->
     <section id="scine-visuals" class="space-y-6">
       <h2 class="text-3xl font-semibold text-center">SCINE Visuals</h2>
       <p id="desc-visuals" class="max-w-3xl mx-auto text-center text-neutral-600"></p>
@@ -49,25 +50,32 @@
       <div id="visuals-carousel-wrapper" class="w-full max-w-6xl mx-auto min-h-[14rem] flex items-center justify-center"></div>
       <div id="visuals-promptBox" class="max-w-5xl mx-auto text-base md:text-lg leading-relaxed text-center"></div>
     </section>
+
+    <!-- ════════════════ Cinematography Guide ════════════════ -->
+    <section id="scine-reference" class="space-y-6">
+      <h2 class="text-3xl font-semibold text-center">Motivating Examples</h2>
+      <p class="max-w-3xl mx-auto text-center text-neutral-600">Film frames that visually justify categories defined in our taxonomy.</p>
+
+      <!-- Category buttons -->
+      <div id="cat-buttons" class="flex flex-wrap justify-center gap-3"></div>
+
+      <!-- Image grid -->
+      <div id="cat-grid" class="w-full max-w-6xl mx-auto"></div>
+    </section>
   </main>
 
   <script>
-    /* --------------------- Section Descriptions --------------------- */
-    const sectionDescriptions = {
-      scripts : 'Qualitative results on SCINE Scripts across models.',
-      visuals : 'Qualitative results on SCINE Visuals across models.'
+    /* ---------------- Section Descriptions ---------------- */
+    const sectionDescriptions={
+      scripts:'Qualitative results on SCINE Scripts across models.',
+      visuals:'Qualitative results on SCINE Visuals across models.'
     };
-    document.getElementById('desc-scripts').textContent  = sectionDescriptions.scripts;
-    document.getElementById('desc-visuals').textContent = sectionDescriptions.visuals;
+    document.getElementById('desc-scripts').textContent=sectionDescriptions.scripts;
+    document.getElementById('desc-visuals').textContent=sectionDescriptions.visuals;
 
-    /* ----------------------- Model Data ---------------------- */
-    const modelNames = [
-      'PyramidFlow','vchitect_2.0','cogvideo_5b','easyanimate_5.1','hunyuan','ltx_video','mochi','wan_1b','wan_14b','luma_ray_2','minimax','pika_2.2'
-    ];
-    const modelDisplay = {
-      PyramidFlow:'Pyramid Flow','vchitect_2.0':'VChitect 2.0',cogvideo_5b:'CogVideo 5B','easyanimate_5.1':'EasyAnimate 5.1',hunyuan:'Hunyuan',
-      ltx_video:'LTX Video',mochi:'Mochi',wan_1b:'Wan 1B',wan_14b:'Wan 14B',luma_ray_2:'Luma Ray 2',minimax:'Minimax','pika_2.2':'Pika 2.2'
-    };
+    /* ---------------- Model Data ---------------- */
+    const modelNames=['PyramidFlow','vchitect_2.0','cogvideo_5b','easyanimate_5.1','hunyuan','ltx_video','mochi','wan_1b','wan_14b','luma_ray_2','minimax','pika_2.2'];
+    const modelDisplay={PyramidFlow:'Pyramid Flow','vchitect_2.0':'VChitect 2.0',cogvideo_5b:'CogVideo 5B','easyanimate_5.1':'EasyAnimate 5.1',hunyuan:'Hunyuan',ltx_video:'LTX Video',mochi:'Mochi',wan_1b:'Wan 1B',wan_14b:'Wan 14B',luma_ray_2:'Luma Ray 2',minimax:'Minimax','pika_2.2':'Pika 2.2'};
 
     /* -------------------- Scripts Prompts -------------------- */
     const scriptPages=[
@@ -99,80 +107,109 @@
       {id:'00461',prompt:'In a bustling university hallway during a lively graduation ceremony, captured with a Medium lens and shallow depth of field to isolate the pair from the chaotic background, a proud father and his accomplished daughter share a spontaneous, heartfelt hug in close-up framing. The camera executes a gentle push-in movement on a stabilizer, compressing the emotional space between them as celebratory crowds blur into abstract shapes of color and motion.',meta:'Camera – Easy'}
     ];
 
-    /* ------------------- Utility Helpers ------------------- */
-    const selectedCacheScripts  = {};
-    const selectedCacheVisuals = {};
+    /* ---------------- Cinematography reference (images) ---------------- */
+    // Raw filename lists per category
+    const categories={
+      angles:['dutch-right.jpeg','eye-level.jpeg','ground-level.jpeg','HA.jpeg','hip-level.jpeg','knee-level.jpeg','LA.jpeg','overhead.jpeg','shoulder-level.jpeg'],
+      shot:['WS.jpeg','MS.jpeg','FS.jpeg', 'CU.jpeg', 'ECU.jpeg', 'MCU.jpeg'],
+      Depth_of_Field :['deep-focus.jpeg','shallow-focus.jpeg', 'rack-focus.jpeg', 'soft-focus.jpeg', 'split-diopter.jpeg', 'tilt-shift.jpeg'],
+      framing:['single.jpeg','2-shot.jpeg','pov.jpeg', 'OTS.jpeg'],
+      'soft-lighting':['high-key-1.png','high-key-2.jpeg', 'high-key-3.png','high-key-4.png', 'high-key-5.png','high-key-6.png', 'high-key-7.png','high-key-8.png'],
+      'hard-lighting':['0.png','1.png','2.png','3.png','4.png','5.png','6.png','7.png'],
+      'setup_balance':['rot.jpg','rot2.jpg','rot3.jpg','symmetry.webp','symmetry2.jpeg', 'symmetry3.webp'],
+      'setup_lines_shapes': ['line1.jpg','line2.jpg','line3.jpg','line4.jpg','line5.jpg','line6.jpg']
+    };
 
-    function shuffle(a){const arr=[...a];for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
+    // Optional friendly names for category buttons
+    const categoryDisplay={
+      angles:'Camera Angle',
+      shot:'Camera Shot Size',
+      Depth_of_Field :'Camera Depth of Field',
+      framing:'Camera Framing',
+      'soft-lighting':'Soft Lighting',
+      'hard-lighting':'Hard Lighting',
+      'setup_balance': 'Setup Balance',
+      'setup_lines_shapes' : 'Setup Lines and Shapes'
+    };
 
-    async function pickModels(id,folder,desired){
-      const shuffled=shuffle(modelNames);
-      const chosen=[];
-      for(const m of shuffled){
-        try{
-          const ok=await fetch(`${folder}${m}_${id}.mp4`,{method:'HEAD'}).then(r=>r.ok).catch(()=>false);
-          if(ok) chosen.push(m);
-          if(chosen.length===desired) break;
-        }catch{ /* ignore */ }
-      }
-      return chosen;
+    // Optional friendly labels for individual images (keyed by category → filename)
+    const imageLabels={
+      angles:{'dutch-right.jpeg':'Dutch Right','eye-level.jpeg':'Eye Level','ground-level.jpeg':'Ground Level','HA.jpeg':'High Angle','hip-level.jpeg':'Hip Level','knee-level.jpeg':'Knee Level','LA.jpeg':'Low Angle','overhead.jpeg':'Overhead','shoulder-level.jpeg':'Shoulder Level'},
+      shot:{'WS.jpeg':'Wide Shot', 'MS.jpeg': 'Medium Shot', 'FS.jpeg': 'Full Shot', 'CU.jpeg': 'Close Up', 'ECU.jpeg': 'Extreme Close Up', 'MCU.jpeg': 'Medium Close Up'},
+      Depth_of_Field: {'deep-focus.jpeg': 'Deep Focus','shallow-focus.jpeg': 'Shallow Focus', 'rack-focus.jpeg': 'Rack Focus', 'soft-focus.jpeg': 'Soft Focus', 'split-diopter.jpeg': 'Split Diopter', 'tilt-shift.jpeg': 'Tilt Shift'},
+      framing: {'single.jpeg': 'Single Shot','2-shot.jpeg': '2 Shot','pov.jpeg': 'PoV', 'OTS.jpeg': 'Over the Shoulder'}
+      // add others as needed
+    };
+
+    const noLabelCats=['soft-lighting', 'hard-lighting', 'setup_balance', 'setup_lines_shapes'];
+
+    /* -------------- Utility helpers -------------- */
+    const cacheScripts={},cacheVisuals={};
+    const shuffle=a=>{const arr=[...a];for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;};
+
+    async function pickModels(id,f,need){const s=shuffle(modelNames),c=[];for(const m of s){if(await fetch(`${f}${m}_${id}.mp4`,{method:'HEAD'}).then(r=>r.ok).catch(()=>false))c.push(m);if(c.length===need)break;}return c;}
+    async function getModels(id,f,need,cache){if(cache[id])return cache[id];return cache[id]=await pickModels(id,f,need);}    
+    const grid=(mods,f,id,cols)=>`<div class="grid grid-cols-${cols} gap-0 hide-scrollbar">`+mods.map(m=>`<div class=\"relative group w-full h-40 md:h-48 overflow-hidden border border-gray-200\"><video src=\"${f}${m}_${id}.mp4\" muted loop playsinline class=\"object-cover w-full h-full\"></video><span class=\"absolute inset-x-0 bottom-0 bg-black/70 text-center text-xs p-1 text-white\">${modelDisplay[m]||m}</span></div>`).join('')+'</div>';
+
+    /* -------------- Scripts rendering -------------- */
+    let idxS=0;const wrapS=document.getElementById('carousel-wrapper'),prS=document.getElementById('promptBox');
+    async function renderS(){wrapS.innerHTML='<span class="text-neutral-400">Loading videos…</span>';const p=scriptPages[idxS],f=`data/scine_scripts/${p.id}/`,mods=await getModels(p.id,f,9,cacheScripts);wrapS.innerHTML=grid(mods,f,p.id,3);prS.innerHTML=`${p.prompt} <span class="text-neutral-500">(${p.meta})</span>`;wrapS.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));}
+    document.getElementById('prevBtn').onclick=()=>{idxS=(idxS-1+scriptPages.length)%scriptPages.length;renderS();};
+    document.getElementById('nextBtn').onclick=()=>{idxS=(idxS+1)%scriptPages.length;renderS();};
+
+    /* -------------- Visuals rendering -------------- */
+    let idxV=0;const wrapV=document.getElementById('visuals-carousel-wrapper'),prV=document.getElementById('visuals-promptBox');
+    async function renderV(){wrapV.innerHTML='<span class="text-neutral-400">Loading videos…</span>';const p=visualPages[idxV],f=`data/scine_visuals/${p.id}/`,mods=await getModels(p.id,f,6,cacheVisuals);wrapV.innerHTML=grid(mods,f,p.id,3);prV.innerHTML=`${p.prompt} <span class="text-neutral-500">(${p.meta})</span>`;wrapV.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));}
+    document.getElementById('prevVisBtn').onclick=()=>{idxV=(idxV-1+visualPages.length)%visualPages.length;renderV();};
+    document.getElementById('nextVisBtn').onclick=()=>{idxV=(idxV+1)%visualPages.length;renderV();};
+
+    /* -------------- Cinematography reference rendering -------------- */
+    const catButtons=document.getElementById('cat-buttons');
+    const catGrid   =document.getElementById('cat-grid');
+    const catBase   ='data/categories/';
+
+    // Build the category buttons once
+    Object.keys(categories).forEach((cat,idx)=>{
+      const btn=document.createElement('button');
+      btn.textContent=categoryDisplay[cat]||cat.replace(/-/g,' ');
+      btn.dataset.cat=cat;
+      btn.className='px-3 py-1 text-sm rounded border border-gray-300 bg-gray-100 hover:bg-gray-200 transition';
+      btn.onclick=()=>renderCategory(cat);
+      catButtons.appendChild(btn);
+      if(idx===0) renderCategory(cat); // render first category by default
+    });
+
+    
+
+    function buildCatGrid(cat){
+  const files   = categories[cat] || [];
+  const hideCap = noLabelCats.includes(cat);   // hide captions?
+
+  return `<div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-2">` +
+    files.map(file=>{
+      const label = (imageLabels[cat] && imageLabels[cat][file]) 
+                    || file.replace(/\\.[^/.]+$/,'');
+      return `
+        <figure class="border border-gray-200">
+          <img src="${catBase}${cat}/${file}" alt="${label}" class="object-cover w-full h-32 md:h-40">
+          ${hideCap ? '' : `<figcaption class="text-xs text-center py-1">${label}</figcaption>`}
+        </figure>`;
+    }).join('') +
+  '</div>';
+}
+
+    function renderCategory(cat){
+      Array.from(catButtons.children).forEach(btn=>{
+        const active=btn.dataset.cat===cat;
+        btn.classList.toggle('bg-gray-300',active); // lighter highlight
+        btn.classList.toggle('text-gray-900',active);
+      });
+      catGrid.innerHTML=buildCatGrid(cat);
     }
 
-    async function getModels(id,folder,desired,cache){
-      if(cache[id]) return cache[id];
-      const models=await pickModels(id,folder,desired);
-      cache[id]=models;
-      return models;
-    }
-
-    function buildGrid(models,folder,id,cols){
-      return `<div class="grid grid-cols-${cols} gap-0 hide-scrollbar">`+
-        models.map(m=>{
-          const src=`${folder}${m}_${id}.mp4`;
-          const label=modelDisplay[m]||m;
-          return `<div class=\"relative group w-full h-40 md:h-48 overflow-hidden border border-gray-200\"><video src=\"${src}\" muted loop playsinline class=\"object-cover w-full h-full\"></video><span class=\"absolute inset-x-0 bottom-0 bg-black/70 text-center text-xs opacity-100 p-1 text-white\">${label}</span></div>`;
-        }).join('')+`</div>`;
-    }
-
-    /* ---------------- Scripts Rendering ---------------- */
-    let idxScripts=0;
-    const wrapperScripts=document.getElementById('carousel-wrapper');
-    const promptScripts=document.getElementById('promptBox');
-
-    async function renderScripts(){
-      wrapperScripts.innerHTML='<span class="text-neutral-400">Loading videos…</span>';
-      const page=scriptPages[idxScripts];
-      const folder=`data/scine_scripts/${page.id}/`;
-      const models=await getModels(page.id,folder,9,selectedCacheScripts);
-      wrapperScripts.innerHTML=buildGrid(models,folder,page.id,3);
-      promptScripts.innerHTML=`${page.prompt} <span class="text-neutral-500">(${page.meta})</span>`;
-      wrapperScripts.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
-    }
-
-    document.getElementById('prevBtn').onclick=()=>{idxScripts=(idxScripts-1+scriptPages.length)%scriptPages.length;renderScripts();};
-    document.getElementById('nextBtn').onclick=()=>{idxScripts=(idxScripts+1)%scriptPages.length;renderScripts();};
-
-    /* ---------------- Visuals Rendering ---------------- */
-    let idxVisuals=0;
-    const wrapperVisuals=document.getElementById('visuals-carousel-wrapper');
-    const promptVisuals=document.getElementById('visuals-promptBox');
-
-    async function renderVisuals(){
-      wrapperVisuals.innerHTML='<span class="text-neutral-400">Loading videos…</span>';
-      const page=visualPages[idxVisuals];
-      const folder=`data/scine_visuals/${page.id}/`;
-      const models=await getModels(page.id,folder,6,selectedCacheVisuals);
-      wrapperVisuals.innerHTML=buildGrid(models,folder,page.id,3);
-      promptVisuals.innerHTML=`${page.prompt} <span class="text-neutral-500">(${page.meta})</span>`;
-      wrapperVisuals.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
-    }
-
-    document.getElementById('prevVisBtn').onclick=()=>{idxVisuals=(idxVisuals-1+visualPages.length)%visualPages.length;renderVisuals();};
-    document.getElementById('nextVisBtn').onclick=()=>{idxVisuals=(idxVisuals+1)%visualPages.length;renderVisuals();};
-
-    /* ---------------- Initial Render ---------------- */
-    renderScripts();
-    renderVisuals();
+    /* -------------- Initial renders -------------- */
+    renderS();
+    renderV();
   </script>
 </body>
 </html>
